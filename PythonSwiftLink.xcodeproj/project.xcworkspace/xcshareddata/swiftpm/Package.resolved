@@ -1,0 +1,97 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CodeEditor",
+        "repositoryURL": "https://github.com/ZeeZide/CodeEditor.git",
+        "state": {
+          "branch": "main",
+          "revision": "9b888ab2d74592888c066e0486e64c62e191b1f3",
+          "version": null
+        }
+      },
+      {
+        "package": "Gzip",
+        "repositoryURL": "https://github.com/1024jp/GzipSwift",
+        "state": {
+          "branch": "develop",
+          "revision": "ae02027cd030c73a9d177f50e612bbd491ebe371",
+          "version": null
+        }
+      },
+      {
+        "package": "Highlightr",
+        "repositoryURL": "https://github.com/raspu/Highlightr",
+        "state": {
+          "branch": null,
+          "revision": "93199b9e434f04bda956a613af8f571933f9f037",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "PythonKit",
+        "repositoryURL": "https://github.com/pvieito/PythonKit",
+        "state": {
+          "branch": "master",
+          "revision": "81f621d094a7c8923207efe5178f50dba1b56c39",
+          "version": null
+        }
+      },
+      {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "fd48276f88f3d55dbdcdc9e8cbf32541811d5865",
+          "version": "12.1.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-swift",
+        "state": {
+          "branch": "master",
+          "revision": "f7ab017ac93178c3df274248ca37e224e624e619",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftUIWindow",
+        "repositoryURL": "https://github.com/mortenjust/SwiftUIWindow",
+        "state": {
+          "branch": "main",
+          "revision": "0e2b92c2b2a3df817c3c4c58a03b9fc701457ac8",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftyBeaver",
+        "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver",
+        "state": {
+          "branch": "master",
+          "revision": "12b5acf96d98f91d50de447369bd18df74600f1a",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON",
+        "state": {
+          "branch": "master",
+          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+          "version": null
+        }
+      },
+      {
+        "package": "Zip",
+        "repositoryURL": "https://github.com/marmelroy/Zip",
+        "state": {
+          "branch": "master",
+          "revision": "67fa55813b9e7b3b9acee9c0ae501def28746d76",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

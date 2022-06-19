@@ -1,0 +1,1216 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C81A77F285F29B8004FE6AA /* PythonSwiftLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A77E285F29B8004FE6AA /* PythonSwiftLinkApp.swift */; };
+		8C81A783285F29BA004FE6AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C81A782285F29BA004FE6AA /* Assets.xcassets */; };
+		8C81A786285F29BA004FE6AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C81A785285F29BA004FE6AA /* Preview Assets.xcassets */; };
+		8C81A791285F29BA004FE6AA /* PythonSwiftLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A790285F29BA004FE6AA /* PythonSwiftLinkTests.swift */; };
+		8C81A79B285F29BA004FE6AA /* PythonSwiftLinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A79A285F29BA004FE6AA /* PythonSwiftLinkUITests.swift */; };
+		8C81A79D285F29BA004FE6AA /* PythonSwiftLinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A79C285F29BA004FE6AA /* PythonSwiftLinkUITestsLaunchTests.swift */; };
+		8C81A7E7285F2A0A004FE6AA /* KSLUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7AA285F2A0A004FE6AA /* KSLUpdate.swift */; };
+		8C81A7E8285F2A0A004FE6AA /* Extensions_Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7AB285F2A0A004FE6AA /* Extensions_Helpers.swift */; };
+		8C81A7E9285F2A0A004FE6AA /* ksl_paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7AC285F2A0A004FE6AA /* ksl_paths.swift */; };
+		8C81A7EA285F2A0A004FE6AA /* CommandLineFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7AD285F2A0A004FE6AA /* CommandLineFunctions.swift */; };
+		8C81A7EB285F2A0A004FE6AA /* version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7AE285F2A0A004FE6AA /* version.swift */; };
+		8C81A7EC285F2A0A004FE6AA /* kslProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7AF285F2A0A004FE6AA /* kslProjectExtension.swift */; };
+		8C81A7ED285F2A0A004FE6AA /* GeneratePythonCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7B0285F2A0A004FE6AA /* GeneratePythonCert.swift */; };
+		8C81A7F0285F2A0A004FE6AA /* SwiftCodeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7B4285F2A0A004FE6AA /* SwiftCodeLayout.swift */; };
+		8C81A7F1285F2A0A004FE6AA /* jsonDataArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7B6285F2A0A004FE6AA /* jsonDataArg.swift */; };
+		8C81A7F2285F2A0A004FE6AA /* boolArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7B7285F2A0A004FE6AA /* boolArg.swift */; };
+		8C81A7F3285F2A0A004FE6AA /* dataArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7B8285F2A0A004FE6AA /* dataArg.swift */; };
+		8C81A7F5285F2A0B004FE6AA /* objectArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7BA285F2A0A004FE6AA /* objectArg.swift */; };
+		8C81A7F6285F2A0B004FE6AA /* intArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7BB285F2A0A004FE6AA /* intArg.swift */; };
+		8C81A7F7285F2A0B004FE6AA /* intEnumArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7BC285F2A0A004FE6AA /* intEnumArg.swift */; };
+		8C81A7F9285F2A0B004FE6AA /* WrapArgsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7BE285F2A0A004FE6AA /* WrapArgsProtocol.swift */; };
+		8C81A7FA285F2A0B004FE6AA /* objectStrEnumArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7BF285F2A0A004FE6AA /* objectStrEnumArg.swift */; };
+		8C81A7FB285F2A0B004FE6AA /* strArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C0285F2A0A004FE6AA /* strArg.swift */; };
+		8C81A7FC285F2A0B004FE6AA /* floatArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C1285F2A0A004FE6AA /* floatArg.swift */; };
+		8C81A7FD285F2A0B004FE6AA /* WrapArgProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C2285F2A0A004FE6AA /* WrapArgProtocol.swift */; };
+		8C81A7FE285F2A0B004FE6AA /* WrapModuleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C3285F2A0A004FE6AA /* WrapModuleExtensions.swift */; };
+		8C81A7FF285F2A0B004FE6AA /* WrapperHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C4285F2A0A004FE6AA /* WrapperHandler.swift */; };
+		8C81A800285F2A0B004FE6AA /* WrapClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C5285F2A0A004FE6AA /* WrapClass.swift */; };
+		8C81A801285F2A0B004FE6AA /* PyCallbackWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C6285F2A0A004FE6AA /* PyCallbackWrapper.swift */; };
+		8C81A802285F2A0B004FE6AA /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C7285F2A0A004FE6AA /* Enums.swift */; };
+		8C81A803285F2A0B004FE6AA /* Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C8285F2A0A004FE6AA /* Converters.swift */; };
+		8C81A804285F2A0B004FE6AA /* WrapModule+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7C9285F2A0A004FE6AA /* WrapModule+Export.swift */; };
+		8C81A805285F2A0B004FE6AA /* WrapFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7CA285F2A0A004FE6AA /* WrapFunction.swift */; };
+		8C81A806285F2A0B004FE6AA /* CustomStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7CB285F2A0A004FE6AA /* CustomStructs.swift */; };
+		8C81A807285F2A0B004FE6AA /* WrapArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7CC285F2A0A004FE6AA /* WrapArg.swift */; };
+		8C81A808285F2A0B004FE6AA /* CustomEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7CD285F2A0A004FE6AA /* CustomEnums.swift */; };
+		8C81A809285F2A0B004FE6AA /* WrapModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7CE285F2A0A004FE6AA /* WrapModule.swift */; };
+		8C81A80A285F2A0B004FE6AA /* CodeLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7CF285F2A0A004FE6AA /* CodeLayouts.swift */; };
+		8C81A80B285F2A0B004FE6AA /* WrapArgExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7D0285F2A0A004FE6AA /* WrapArgExtensions.swift */; };
+		8C81A80C285F2A0B004FE6AA /* PythonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7D1285F2A0A004FE6AA /* PythonHandler.swift */; };
+		8C81A80D285F2A0B004FE6AA /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7D4285F2A0A004FE6AA /* RealmService.swift */; };
+		8C81A81A285F2A0B004FE6AA /* SwiftGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7E2285F2A0A004FE6AA /* SwiftGenerator.swift */; };
+		8C81A81B285F2A0B004FE6AA /* PythonDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7E3285F2A0A004FE6AA /* PythonDownloader.swift */; };
+		8C81A81C285F2A0B004FE6AA /* AutoDocGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7E5285F2A0A004FE6AA /* AutoDocGenerator.swift */; };
+		8C81A81D285F2A0B004FE6AA /* PythonObjectExtensionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A7E6285F2A0A004FE6AA /* PythonObjectExtensionWriter.swift */; };
+		8C81A820285F2B4A004FE6AA /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A81F285F2B4A004FE6AA /* PythonKit */; };
+		8C81A823285F2B68004FE6AA /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A822285F2B68004FE6AA /* CodeEditor */; };
+		8C81A829285F2B83004FE6AA /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A828285F2B83004FE6AA /* Gzip */; };
+		8C81A82C285F2B95004FE6AA /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A82B285F2B95004FE6AA /* Highlightr */; };
+		8C81A82F285F2BC4004FE6AA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A82E285F2BC4004FE6AA /* Realm */; };
+		8C81A831285F2BC4004FE6AA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A830285F2BC4004FE6AA /* RealmSwift */; };
+		8C81A834285F2BE2004FE6AA /* SwiftUIWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A833285F2BE2004FE6AA /* SwiftUIWindow */; };
+		8C81A837285F2BF5004FE6AA /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A836285F2BF5004FE6AA /* SwiftyBeaver */; };
+		8C81A83A285F2C07004FE6AA /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A839285F2C07004FE6AA /* SwiftyJSON */; };
+		8C81A83D285F2C20004FE6AA /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 8C81A83C285F2C20004FE6AA /* Zip */; };
+		8C81A8A8285F2C54004FE6AA /* DeleteProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A83E285F2C4F004FE6AA /* DeleteProjectView.swift */; };
+		8C81A8A9285F2C54004FE6AA /* PythonVenvRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A83F285F2C4F004FE6AA /* PythonVenvRow.swift */; };
+		8C81A8E0285F2C54004FE6AA /* StatusTextViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A87C285F2C50004FE6AA /* StatusTextViewer.swift */; };
+		8C81A8E1285F2C54004FE6AA /* AppFilesChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A87D285F2C50004FE6AA /* AppFilesChecker.swift */; };
+		8C81A8E3285F2C54004FE6AA /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A87F285F2C50004FE6AA /* AlertView.swift */; };
+		8C81A8E4285F2C54004FE6AA /* NoConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A880285F2C51004FE6AA /* NoConfigView.swift */; };
+		8C81A8E5285F2C54004FE6AA /* WrapperCodeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A881285F2C51004FE6AA /* WrapperCodeEditor.swift */; };
+		8C81A8E6285F2C54004FE6AA /* NewWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A882285F2C51004FE6AA /* NewWrapperView.swift */; };
+		8C81A8E7285F2C54004FE6AA /* ProjectInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A883285F2C51004FE6AA /* ProjectInfoView.swift */; };
+		8C81A8E8285F2C54004FE6AA /* NewProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A884285F2C52004FE6AA /* NewProjectView.swift */; };
+		8C81A8E9285F2C54004FE6AA /* CommandsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A885285F2C52004FE6AA /* CommandsMenu.swift */; };
+		8C81A8EA285F2C54004FE6AA /* RecentFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A886285F2C52004FE6AA /* RecentFoldersView.swift */; };
+		8C81A8EB285F2C54004FE6AA /* RecipeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A887285F2C52004FE6AA /* RecipeRowView.swift */; };
+		8C81A8EC285F2C54004FE6AA /* ProjectsCmdMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A888285F2C52004FE6AA /* ProjectsCmdMenu.swift */; };
+		8C81A8ED285F2C54004FE6AA /* WrapperCommandQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A88A285F2C53004FE6AA /* WrapperCommandQueue.swift */; };
+		8C81A8EE285F2C54004FE6AA /* WorkingFolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A88B285F2C53004FE6AA /* WorkingFolderData.swift */; };
+		8C81A8EF285F2C54004FE6AA /* PipJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A88C285F2C53004FE6AA /* PipJsonData.swift */; };
+		8C81A8F0285F2C54004FE6AA /* KSLWrapperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A88D285F2C53004FE6AA /* KSLWrapperData.swift */; };
+		8C81A8F1285F2C54004FE6AA /* ViewStatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A88E285F2C53004FE6AA /* ViewStatesModel.swift */; };
+		8C81A8F2285F2C54004FE6AA /* KSLProjectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A88F285F2C53004FE6AA /* KSLProjectData.swift */; };
+		8C81A8F3285F2C54004FE6AA /* PipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A890285F2C53004FE6AA /* PipData.swift */; };
+		8C81A8F4285F2C54004FE6AA /* KSLViewLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A891285F2C53004FE6AA /* KSLViewLogger.swift */; };
+		8C81A8F5285F2C54004FE6AA /* WorkingFolderData+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A892285F2C53004FE6AA /* WorkingFolderData+Setup.swift */; };
+		8C81A8F6285F2C54004FE6AA /* ViewStates+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A893285F2C53004FE6AA /* ViewStates+Setup.swift */; };
+		8C81A8F7285F2C54004FE6AA /* KSLProjectData+PList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A894285F2C53004FE6AA /* KSLProjectData+PList.swift */; };
+		8C81A8F8285F2C54004FE6AA /* FolderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A895285F2C53004FE6AA /* FolderMonitor.swift */; };
+		8C81A8F9285F2C54004FE6AA /* CodeTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A896285F2C53004FE6AA /* CodeTemplates.swift */; };
+		8C81A8FA285F2C54004FE6AA /* KSLRealmDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A897285F2C53004FE6AA /* KSLRealmDataModel.swift */; };
+		8C81A8FB285F2C54004FE6AA /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A898285F2C53004FE6AA /* GlobalFunctions.swift */; };
+		8C81A8FC285F2C54004FE6AA /* KSLDataModelNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A899285F2C53004FE6AA /* KSLDataModelNew.swift */; };
+		8C81A8FD285F2C54004FE6AA /* ProjectStatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A89A285F2C53004FE6AA /* ProjectStatesModel.swift */; };
+		8C81A8FE285F2C54004FE6AA /* PythonHostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A89B285F2C53004FE6AA /* PythonHostRow.swift */; };
+		8C81A8FF285F2C54004FE6AA /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A89C285F2C53004FE6AA /* SetupView.swift */; };
+		8C81A900285F2C54004FE6AA /* PipVersionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A89E285F2C53004FE6AA /* PipVersionEditView.swift */; };
+		8C81A901285F2C54004FE6AA /* GlobalPipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A89F285F2C53004FE6AA /* GlobalPipManager.swift */; };
+		8C81A902285F2C54004FE6AA /* PipDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A8A0285F2C53004FE6AA /* PipDataRow.swift */; };
+		8C81A903285F2C54004FE6AA /* PipListsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A8A1285F2C53004FE6AA /* PipListsManager.swift */; };
+		8C81A904285F2C54004FE6AA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A8A2285F2C53004FE6AA /* SwiftUIView.swift */; };
+		8C81A905285F2C54004FE6AA /* EditProjectPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A8A4285F2C54004FE6AA /* EditProjectPList.swift */; };
+		8C81A906285F2C54004FE6AA /* Admob_Addon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A8A5285F2C54004FE6AA /* Admob_Addon.swift */; };
+		8C81A907285F2C54004FE6AA /* KSLProjectAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A8A6285F2C54004FE6AA /* KSLProjectAddon.swift */; };
+		8C81A908285F2C54004FE6AA /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A8A7285F2C54004FE6AA /* ProjectsView.swift */; };
+		8C81A983285F2D99004FE6AA /* GlobalAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A97C285F2D98004FE6AA /* GlobalAppData.swift */; };
+		8C81A984285F2D99004FE6AA /* KSLDataModel+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A97D285F2D98004FE6AA /* KSLDataModel+Setup.swift */; };
+		8C81A985285F2D99004FE6AA /* CommandQueueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A97E285F2D98004FE6AA /* CommandQueueItem.swift */; };
+		8C81A986285F2D99004FE6AA /* XCProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A97F285F2D98004FE6AA /* XCProjectManager.swift */; };
+		8C81A987285F2D99004FE6AA /* KSLDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A980285F2D98004FE6AA /* KSLDataModel.swift */; };
+		8C81A988285F2D99004FE6AA /* KSLWrapperBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A981285F2D99004FE6AA /* KSLWrapperBuild.swift */; };
+		8C81A989285F2D99004FE6AA /* KSLProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A982285F2D99004FE6AA /* KSLProjects.swift */; };
+		8C81A98B285F2EFB004FE6AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A98A285F2EFB004FE6AA /* ContentView.swift */; };
+		8C81A98D285F2FE9004FE6AA /* PK+SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A98C285F2FE9004FE6AA /* PK+SwiftTypes.swift */; };
+		8C81A990285F31F7004FE6AA /* DirectoryDeepWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A98E285F31F7004FE6AA /* DirectoryDeepWatcher.swift */; };
+		8C81A991285F31F7004FE6AA /* DirectoryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81A98F285F31F7004FE6AA /* DirectoryWatcher.swift */; };
+		8CBB3668285F7D6C009AFCC3 /* PipManagerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBB3667285F7D6C009AFCC3 /* PipManagerList.swift */; };
+		8CBB366A285F7D96009AFCC3 /* PipManagerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBB3669285F7D96009AFCC3 /* PipManagerData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C81A78D285F29BA004FE6AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C81A773285F29B8004FE6AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C81A77A285F29B8004FE6AA;
+			remoteInfo = PythonSwiftLink;
+		};
+		8C81A797285F29BA004FE6AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C81A773285F29B8004FE6AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C81A77A285F29B8004FE6AA;
+			remoteInfo = PythonSwiftLink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C81A77B285F29B8004FE6AA /* PythonSwiftLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PythonSwiftLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C81A77E285F29B8004FE6AA /* PythonSwiftLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonSwiftLinkApp.swift; sourceTree = "<group>"; };
+		8C81A782285F29BA004FE6AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C81A785285F29BA004FE6AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C81A787285F29BA004FE6AA /* PythonSwiftLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PythonSwiftLink.entitlements; sourceTree = "<group>"; };
+		8C81A78C285F29BA004FE6AA /* PythonSwiftLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PythonSwiftLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C81A790285F29BA004FE6AA /* PythonSwiftLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonSwiftLinkTests.swift; sourceTree = "<group>"; };
+		8C81A796285F29BA004FE6AA /* PythonSwiftLinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PythonSwiftLinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C81A79A285F29BA004FE6AA /* PythonSwiftLinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonSwiftLinkUITests.swift; sourceTree = "<group>"; };
+		8C81A79C285F29BA004FE6AA /* PythonSwiftLinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonSwiftLinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C81A7AA285F2A0A004FE6AA /* KSLUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLUpdate.swift; sourceTree = "<group>"; };
+		8C81A7AB285F2A0A004FE6AA /* Extensions_Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_Helpers.swift; sourceTree = "<group>"; };
+		8C81A7AC285F2A0A004FE6AA /* ksl_paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ksl_paths.swift; sourceTree = "<group>"; };
+		8C81A7AD285F2A0A004FE6AA /* CommandLineFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLineFunctions.swift; sourceTree = "<group>"; };
+		8C81A7AE285F2A0A004FE6AA /* version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = version.swift; sourceTree = "<group>"; };
+		8C81A7AF285F2A0A004FE6AA /* kslProjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kslProjectExtension.swift; sourceTree = "<group>"; };
+		8C81A7B0285F2A0A004FE6AA /* GeneratePythonCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePythonCert.swift; sourceTree = "<group>"; };
+		8C81A7B1285F2A0A004FE6AA /* ProjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
+		8C81A7B2285F2A0A004FE6AA /* TestSuite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSuite.swift; sourceTree = "<group>"; };
+		8C81A7B4285F2A0A004FE6AA /* SwiftCodeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCodeLayout.swift; sourceTree = "<group>"; };
+		8C81A7B6285F2A0A004FE6AA /* jsonDataArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonDataArg.swift; sourceTree = "<group>"; };
+		8C81A7B7285F2A0A004FE6AA /* boolArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = boolArg.swift; sourceTree = "<group>"; };
+		8C81A7B8285F2A0A004FE6AA /* dataArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataArg.swift; sourceTree = "<group>"; };
+		8C81A7BA285F2A0A004FE6AA /* objectArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = objectArg.swift; sourceTree = "<group>"; };
+		8C81A7BB285F2A0A004FE6AA /* intArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intArg.swift; sourceTree = "<group>"; };
+		8C81A7BC285F2A0A004FE6AA /* intEnumArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intEnumArg.swift; sourceTree = "<group>"; };
+		8C81A7BE285F2A0A004FE6AA /* WrapArgsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapArgsProtocol.swift; sourceTree = "<group>"; };
+		8C81A7BF285F2A0A004FE6AA /* objectStrEnumArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = objectStrEnumArg.swift; sourceTree = "<group>"; };
+		8C81A7C0285F2A0A004FE6AA /* strArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strArg.swift; sourceTree = "<group>"; };
+		8C81A7C1285F2A0A004FE6AA /* floatArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = floatArg.swift; sourceTree = "<group>"; };
+		8C81A7C2285F2A0A004FE6AA /* WrapArgProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapArgProtocol.swift; sourceTree = "<group>"; };
+		8C81A7C3285F2A0A004FE6AA /* WrapModuleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapModuleExtensions.swift; sourceTree = "<group>"; };
+		8C81A7C4285F2A0A004FE6AA /* WrapperHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapperHandler.swift; sourceTree = "<group>"; };
+		8C81A7C5285F2A0A004FE6AA /* WrapClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapClass.swift; sourceTree = "<group>"; };
+		8C81A7C6285F2A0A004FE6AA /* PyCallbackWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyCallbackWrapper.swift; sourceTree = "<group>"; };
+		8C81A7C7285F2A0A004FE6AA /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8C81A7C8285F2A0A004FE6AA /* Converters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converters.swift; sourceTree = "<group>"; };
+		8C81A7C9285F2A0A004FE6AA /* WrapModule+Export.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WrapModule+Export.swift"; sourceTree = "<group>"; };
+		8C81A7CA285F2A0A004FE6AA /* WrapFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapFunction.swift; sourceTree = "<group>"; };
+		8C81A7CB285F2A0A004FE6AA /* CustomStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStructs.swift; sourceTree = "<group>"; };
+		8C81A7CC285F2A0A004FE6AA /* WrapArg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapArg.swift; sourceTree = "<group>"; };
+		8C81A7CD285F2A0A004FE6AA /* CustomEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEnums.swift; sourceTree = "<group>"; };
+		8C81A7CE285F2A0A004FE6AA /* WrapModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapModule.swift; sourceTree = "<group>"; };
+		8C81A7CF285F2A0A004FE6AA /* CodeLayouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeLayouts.swift; sourceTree = "<group>"; };
+		8C81A7D0285F2A0A004FE6AA /* WrapArgExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapArgExtensions.swift; sourceTree = "<group>"; };
+		8C81A7D1285F2A0A004FE6AA /* PythonHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonHandler.swift; sourceTree = "<group>"; };
+		8C81A7D2285F2A0A004FE6AA /* KivySwiftLink.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = KivySwiftLink.entitlements; sourceTree = "<group>"; };
+		8C81A7D4285F2A0A004FE6AA /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		8C81A7D7285F2A0A004FE6AA /* DB_Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB_Handler.swift; sourceTree = "<group>"; };
+		8C81A7E2285F2A0A004FE6AA /* SwiftGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGenerator.swift; sourceTree = "<group>"; };
+		8C81A7E3285F2A0A004FE6AA /* PythonDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonDownloader.swift; sourceTree = "<group>"; };
+		8C81A7E5285F2A0A004FE6AA /* AutoDocGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDocGenerator.swift; sourceTree = "<group>"; };
+		8C81A7E6285F2A0A004FE6AA /* PythonObjectExtensionWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonObjectExtensionWriter.swift; sourceTree = "<group>"; };
+		8C81A83E285F2C4F004FE6AA /* DeleteProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteProjectView.swift; sourceTree = "<group>"; };
+		8C81A83F285F2C4F004FE6AA /* PythonVenvRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonVenvRow.swift; sourceTree = "<group>"; };
+		8C81A87C285F2C50004FE6AA /* StatusTextViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTextViewer.swift; sourceTree = "<group>"; };
+		8C81A87D285F2C50004FE6AA /* AppFilesChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFilesChecker.swift; sourceTree = "<group>"; };
+		8C81A87F285F2C50004FE6AA /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		8C81A880285F2C51004FE6AA /* NoConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoConfigView.swift; sourceTree = "<group>"; };
+		8C81A881285F2C51004FE6AA /* WrapperCodeEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapperCodeEditor.swift; sourceTree = "<group>"; };
+		8C81A882285F2C51004FE6AA /* NewWrapperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWrapperView.swift; sourceTree = "<group>"; };
+		8C81A883285F2C51004FE6AA /* ProjectInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfoView.swift; sourceTree = "<group>"; };
+		8C81A884285F2C52004FE6AA /* NewProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectView.swift; sourceTree = "<group>"; };
+		8C81A885285F2C52004FE6AA /* CommandsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandsMenu.swift; sourceTree = "<group>"; };
+		8C81A886285F2C52004FE6AA /* RecentFoldersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentFoldersView.swift; sourceTree = "<group>"; };
+		8C81A887285F2C52004FE6AA /* RecipeRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeRowView.swift; sourceTree = "<group>"; };
+		8C81A888285F2C52004FE6AA /* ProjectsCmdMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsCmdMenu.swift; sourceTree = "<group>"; };
+		8C81A88A285F2C53004FE6AA /* WrapperCommandQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapperCommandQueue.swift; sourceTree = "<group>"; };
+		8C81A88B285F2C53004FE6AA /* WorkingFolderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkingFolderData.swift; sourceTree = "<group>"; };
+		8C81A88C285F2C53004FE6AA /* PipJsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipJsonData.swift; sourceTree = "<group>"; };
+		8C81A88D285F2C53004FE6AA /* KSLWrapperData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLWrapperData.swift; sourceTree = "<group>"; };
+		8C81A88E285F2C53004FE6AA /* ViewStatesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStatesModel.swift; sourceTree = "<group>"; };
+		8C81A88F285F2C53004FE6AA /* KSLProjectData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLProjectData.swift; sourceTree = "<group>"; };
+		8C81A890285F2C53004FE6AA /* PipData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipData.swift; sourceTree = "<group>"; };
+		8C81A891285F2C53004FE6AA /* KSLViewLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLViewLogger.swift; sourceTree = "<group>"; };
+		8C81A892285F2C53004FE6AA /* WorkingFolderData+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WorkingFolderData+Setup.swift"; sourceTree = "<group>"; };
+		8C81A893285F2C53004FE6AA /* ViewStates+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewStates+Setup.swift"; sourceTree = "<group>"; };
+		8C81A894285F2C53004FE6AA /* KSLProjectData+PList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KSLProjectData+PList.swift"; sourceTree = "<group>"; };
+		8C81A895285F2C53004FE6AA /* FolderMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderMonitor.swift; sourceTree = "<group>"; };
+		8C81A896285F2C53004FE6AA /* CodeTemplates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeTemplates.swift; sourceTree = "<group>"; };
+		8C81A897285F2C53004FE6AA /* KSLRealmDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLRealmDataModel.swift; sourceTree = "<group>"; };
+		8C81A898285F2C53004FE6AA /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		8C81A899285F2C53004FE6AA /* KSLDataModelNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLDataModelNew.swift; sourceTree = "<group>"; };
+		8C81A89A285F2C53004FE6AA /* ProjectStatesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectStatesModel.swift; sourceTree = "<group>"; };
+		8C81A89B285F2C53004FE6AA /* PythonHostRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonHostRow.swift; sourceTree = "<group>"; };
+		8C81A89C285F2C53004FE6AA /* SetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		8C81A89E285F2C53004FE6AA /* PipVersionEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipVersionEditView.swift; sourceTree = "<group>"; };
+		8C81A89F285F2C53004FE6AA /* GlobalPipManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPipManager.swift; sourceTree = "<group>"; };
+		8C81A8A0285F2C53004FE6AA /* PipDataRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipDataRow.swift; sourceTree = "<group>"; };
+		8C81A8A1285F2C53004FE6AA /* PipListsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipListsManager.swift; sourceTree = "<group>"; };
+		8C81A8A2285F2C53004FE6AA /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		8C81A8A4285F2C54004FE6AA /* EditProjectPList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProjectPList.swift; sourceTree = "<group>"; };
+		8C81A8A5285F2C54004FE6AA /* Admob_Addon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admob_Addon.swift; sourceTree = "<group>"; };
+		8C81A8A6285F2C54004FE6AA /* KSLProjectAddon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLProjectAddon.swift; sourceTree = "<group>"; };
+		8C81A8A7285F2C54004FE6AA /* ProjectsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		8C81A97C285F2D98004FE6AA /* GlobalAppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAppData.swift; sourceTree = "<group>"; };
+		8C81A97D285F2D98004FE6AA /* KSLDataModel+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KSLDataModel+Setup.swift"; sourceTree = "<group>"; };
+		8C81A97E285F2D98004FE6AA /* CommandQueueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandQueueItem.swift; sourceTree = "<group>"; };
+		8C81A97F285F2D98004FE6AA /* XCProjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCProjectManager.swift; sourceTree = "<group>"; };
+		8C81A980285F2D98004FE6AA /* KSLDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLDataModel.swift; sourceTree = "<group>"; };
+		8C81A981285F2D99004FE6AA /* KSLWrapperBuild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLWrapperBuild.swift; sourceTree = "<group>"; };
+		8C81A982285F2D99004FE6AA /* KSLProjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSLProjects.swift; sourceTree = "<group>"; };
+		8C81A98A285F2EFB004FE6AA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8C81A98C285F2FE9004FE6AA /* PK+SwiftTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PK+SwiftTypes.swift"; sourceTree = "<group>"; };
+		8C81A98E285F31F7004FE6AA /* DirectoryDeepWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryDeepWatcher.swift; sourceTree = "<group>"; };
+		8C81A98F285F31F7004FE6AA /* DirectoryWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryWatcher.swift; sourceTree = "<group>"; };
+		8CBB3667285F7D6C009AFCC3 /* PipManagerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipManagerList.swift; sourceTree = "<group>"; };
+		8CBB3669285F7D96009AFCC3 /* PipManagerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipManagerData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C81A778285F29B8004FE6AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C81A834285F2BE2004FE6AA /* SwiftUIWindow in Frameworks */,
+				8C81A82F285F2BC4004FE6AA /* Realm in Frameworks */,
+				8C81A82C285F2B95004FE6AA /* Highlightr in Frameworks */,
+				8C81A831285F2BC4004FE6AA /* RealmSwift in Frameworks */,
+				8C81A823285F2B68004FE6AA /* CodeEditor in Frameworks */,
+				8C81A83D285F2C20004FE6AA /* Zip in Frameworks */,
+				8C81A829285F2B83004FE6AA /* Gzip in Frameworks */,
+				8C81A820285F2B4A004FE6AA /* PythonKit in Frameworks */,
+				8C81A83A285F2C07004FE6AA /* SwiftyJSON in Frameworks */,
+				8C81A837285F2BF5004FE6AA /* SwiftyBeaver in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C81A789285F29BA004FE6AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C81A793285F29BA004FE6AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C81A772285F29B8004FE6AA = {
+			isa = PBXGroup;
+			children = (
+				8C81A7A9285F2A0A004FE6AA /* PythonSwiftLinkParser */,
+				8C81A77D285F29B8004FE6AA /* PythonSwiftLink */,
+				8C81A78F285F29BA004FE6AA /* PythonSwiftLinkTests */,
+				8C81A799285F29BA004FE6AA /* PythonSwiftLinkUITests */,
+				8C81A77C285F29B8004FE6AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C81A77C285F29B8004FE6AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A77B285F29B8004FE6AA /* PythonSwiftLink.app */,
+				8C81A78C285F29BA004FE6AA /* PythonSwiftLinkTests.xctest */,
+				8C81A796285F29BA004FE6AA /* PythonSwiftLinkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C81A77D285F29B8004FE6AA /* PythonSwiftLink */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A787285F29BA004FE6AA /* PythonSwiftLink.entitlements */,
+				8C81A87F285F2C50004FE6AA /* AlertView.swift */,
+				8C81A87D285F2C50004FE6AA /* AppFilesChecker.swift */,
+				8C81A885285F2C52004FE6AA /* CommandsMenu.swift */,
+				8C81A98A285F2EFB004FE6AA /* ContentView.swift */,
+				8C81A83E285F2C4F004FE6AA /* DeleteProjectView.swift */,
+				8C81A98E285F31F7004FE6AA /* DirectoryDeepWatcher.swift */,
+				8C81A98F285F31F7004FE6AA /* DirectoryWatcher.swift */,
+				8C81A884285F2C52004FE6AA /* NewProjectView.swift */,
+				8C81A882285F2C51004FE6AA /* NewWrapperView.swift */,
+				8C81A880285F2C51004FE6AA /* NoConfigView.swift */,
+				8C81A98C285F2FE9004FE6AA /* PK+SwiftTypes.swift */,
+				8C81A883285F2C51004FE6AA /* ProjectInfoView.swift */,
+				8C81A888285F2C52004FE6AA /* ProjectsCmdMenu.swift */,
+				8C81A8A7285F2C54004FE6AA /* ProjectsView.swift */,
+				8C81A89B285F2C53004FE6AA /* PythonHostRow.swift */,
+				8C81A77E285F29B8004FE6AA /* PythonSwiftLinkApp.swift */,
+				8C81A83F285F2C4F004FE6AA /* PythonVenvRow.swift */,
+				8C81A886285F2C52004FE6AA /* RecentFoldersView.swift */,
+				8C81A887285F2C52004FE6AA /* RecipeRowView.swift */,
+				8C81A89C285F2C53004FE6AA /* SetupView.swift */,
+				8C81A87C285F2C50004FE6AA /* StatusTextViewer.swift */,
+				8C81A8A2285F2C53004FE6AA /* SwiftUIView.swift */,
+				8C81A881285F2C51004FE6AA /* WrapperCodeEditor.swift */,
+				8C81A782285F29BA004FE6AA /* Assets.xcassets */,
+				8C81A97B285F2D81004FE6AA /* KSLData */,
+				8C81A89D285F2C53004FE6AA /* PipManager */,
+				8C81A784285F29BA004FE6AA /* Preview Content */,
+				8C81A8A3285F2C54004FE6AA /* Project_Addons */,
+				8C81A889285F2C53004FE6AA /* PSLData_New */,
+			);
+			path = PythonSwiftLink;
+			sourceTree = "<group>";
+		};
+		8C81A784285F29BA004FE6AA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A785285F29BA004FE6AA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C81A78F285F29BA004FE6AA /* PythonSwiftLinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A790285F29BA004FE6AA /* PythonSwiftLinkTests.swift */,
+			);
+			path = PythonSwiftLinkTests;
+			sourceTree = "<group>";
+		};
+		8C81A799285F29BA004FE6AA /* PythonSwiftLinkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A79A285F29BA004FE6AA /* PythonSwiftLinkUITests.swift */,
+				8C81A79C285F29BA004FE6AA /* PythonSwiftLinkUITestsLaunchTests.swift */,
+			);
+			path = PythonSwiftLinkUITests;
+			sourceTree = "<group>";
+		};
+		8C81A7A9285F2A0A004FE6AA /* PythonSwiftLinkParser */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A7AA285F2A0A004FE6AA /* KSLUpdate.swift */,
+				8C81A7AB285F2A0A004FE6AA /* Extensions_Helpers.swift */,
+				8C81A7AC285F2A0A004FE6AA /* ksl_paths.swift */,
+				8C81A7AD285F2A0A004FE6AA /* CommandLineFunctions.swift */,
+				8C81A7AE285F2A0A004FE6AA /* version.swift */,
+				8C81A7AF285F2A0A004FE6AA /* kslProjectExtension.swift */,
+				8C81A7B0285F2A0A004FE6AA /* GeneratePythonCert.swift */,
+				8C81A7B1285F2A0A004FE6AA /* ProjectManager.swift */,
+				8C81A7B2285F2A0A004FE6AA /* TestSuite.swift */,
+				8C81A7B3285F2A0A004FE6AA /* WrapperFiles */,
+				8C81A7D1285F2A0A004FE6AA /* PythonHandler.swift */,
+				8C81A7D2285F2A0A004FE6AA /* KivySwiftLink.entitlements */,
+				8C81A7D3285F2A0A004FE6AA /* DB */,
+				8C81A7E2285F2A0A004FE6AA /* SwiftGenerator.swift */,
+				8C81A7E3285F2A0A004FE6AA /* PythonDownloader.swift */,
+				8C81A7E4285F2A0A004FE6AA /* AutoDocMaker */,
+				8C81A7E6285F2A0A004FE6AA /* PythonObjectExtensionWriter.swift */,
+			);
+			path = PythonSwiftLinkParser;
+			sourceTree = "<group>";
+		};
+		8C81A7B3285F2A0A004FE6AA /* WrapperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A7CF285F2A0A004FE6AA /* CodeLayouts.swift */,
+				8C81A7C8285F2A0A004FE6AA /* Converters.swift */,
+				8C81A7CD285F2A0A004FE6AA /* CustomEnums.swift */,
+				8C81A7CB285F2A0A004FE6AA /* CustomStructs.swift */,
+				8C81A7C7285F2A0A004FE6AA /* Enums.swift */,
+				8C81A7C6285F2A0A004FE6AA /* PyCallbackWrapper.swift */,
+				8C81A7B4285F2A0A004FE6AA /* SwiftCodeLayout.swift */,
+				8C81A7CC285F2A0A004FE6AA /* WrapArg.swift */,
+				8C81A7D0285F2A0A004FE6AA /* WrapArgExtensions.swift */,
+				8C81A7C2285F2A0A004FE6AA /* WrapArgProtocol.swift */,
+				8C81A7B5285F2A0A004FE6AA /* WrapArgs */,
+				8C81A7C5285F2A0A004FE6AA /* WrapClass.swift */,
+				8C81A7CA285F2A0A004FE6AA /* WrapFunction.swift */,
+				8C81A7CE285F2A0A004FE6AA /* WrapModule.swift */,
+				8C81A7C9285F2A0A004FE6AA /* WrapModule+Export.swift */,
+				8C81A7C3285F2A0A004FE6AA /* WrapModuleExtensions.swift */,
+				8C81A7C4285F2A0A004FE6AA /* WrapperHandler.swift */,
+			);
+			path = WrapperFiles;
+			sourceTree = "<group>";
+		};
+		8C81A7B5285F2A0A004FE6AA /* WrapArgs */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A7B6285F2A0A004FE6AA /* jsonDataArg.swift */,
+				8C81A7B7285F2A0A004FE6AA /* boolArg.swift */,
+				8C81A7B8285F2A0A004FE6AA /* dataArg.swift */,
+				8C81A7BA285F2A0A004FE6AA /* objectArg.swift */,
+				8C81A7BB285F2A0A004FE6AA /* intArg.swift */,
+				8C81A7BC285F2A0A004FE6AA /* intEnumArg.swift */,
+				8C81A7BE285F2A0A004FE6AA /* WrapArgsProtocol.swift */,
+				8C81A7BF285F2A0A004FE6AA /* objectStrEnumArg.swift */,
+				8C81A7C0285F2A0A004FE6AA /* strArg.swift */,
+				8C81A7C1285F2A0A004FE6AA /* floatArg.swift */,
+			);
+			path = WrapArgs;
+			sourceTree = "<group>";
+		};
+		8C81A7D3285F2A0A004FE6AA /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A7D4285F2A0A004FE6AA /* RealmService.swift */,
+				8C81A7D7285F2A0A004FE6AA /* DB_Handler.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		8C81A7E4285F2A0A004FE6AA /* AutoDocMaker */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A7E5285F2A0A004FE6AA /* AutoDocGenerator.swift */,
+			);
+			path = AutoDocMaker;
+			sourceTree = "<group>";
+		};
+		8C81A889285F2C53004FE6AA /* PSLData_New */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A88A285F2C53004FE6AA /* WrapperCommandQueue.swift */,
+				8C81A88B285F2C53004FE6AA /* WorkingFolderData.swift */,
+				8C81A88C285F2C53004FE6AA /* PipJsonData.swift */,
+				8C81A88D285F2C53004FE6AA /* KSLWrapperData.swift */,
+				8C81A88E285F2C53004FE6AA /* ViewStatesModel.swift */,
+				8C81A88F285F2C53004FE6AA /* KSLProjectData.swift */,
+				8CBB3666285F7D57009AFCC3 /* PipData */,
+				8C81A891285F2C53004FE6AA /* KSLViewLogger.swift */,
+				8C81A892285F2C53004FE6AA /* WorkingFolderData+Setup.swift */,
+				8C81A893285F2C53004FE6AA /* ViewStates+Setup.swift */,
+				8C81A894285F2C53004FE6AA /* KSLProjectData+PList.swift */,
+				8C81A895285F2C53004FE6AA /* FolderMonitor.swift */,
+				8C81A896285F2C53004FE6AA /* CodeTemplates.swift */,
+				8C81A897285F2C53004FE6AA /* KSLRealmDataModel.swift */,
+				8C81A898285F2C53004FE6AA /* GlobalFunctions.swift */,
+				8C81A899285F2C53004FE6AA /* KSLDataModelNew.swift */,
+				8C81A89A285F2C53004FE6AA /* ProjectStatesModel.swift */,
+			);
+			path = PSLData_New;
+			sourceTree = "<group>";
+		};
+		8C81A89D285F2C53004FE6AA /* PipManager */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A89E285F2C53004FE6AA /* PipVersionEditView.swift */,
+				8C81A89F285F2C53004FE6AA /* GlobalPipManager.swift */,
+				8C81A8A0285F2C53004FE6AA /* PipDataRow.swift */,
+				8C81A8A1285F2C53004FE6AA /* PipListsManager.swift */,
+			);
+			path = PipManager;
+			sourceTree = "<group>";
+		};
+		8C81A8A3285F2C54004FE6AA /* Project_Addons */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A8A4285F2C54004FE6AA /* EditProjectPList.swift */,
+				8C81A8A5285F2C54004FE6AA /* Admob_Addon.swift */,
+				8C81A8A6285F2C54004FE6AA /* KSLProjectAddon.swift */,
+			);
+			path = Project_Addons;
+			sourceTree = "<group>";
+		};
+		8C81A97B285F2D81004FE6AA /* KSLData */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A97E285F2D98004FE6AA /* CommandQueueItem.swift */,
+				8C81A97C285F2D98004FE6AA /* GlobalAppData.swift */,
+				8C81A980285F2D98004FE6AA /* KSLDataModel.swift */,
+				8C81A97D285F2D98004FE6AA /* KSLDataModel+Setup.swift */,
+				8C81A982285F2D99004FE6AA /* KSLProjects.swift */,
+				8C81A981285F2D99004FE6AA /* KSLWrapperBuild.swift */,
+				8C81A97F285F2D98004FE6AA /* XCProjectManager.swift */,
+			);
+			path = KSLData;
+			sourceTree = "<group>";
+		};
+		8CBB3666285F7D57009AFCC3 /* PipData */ = {
+			isa = PBXGroup;
+			children = (
+				8C81A890285F2C53004FE6AA /* PipData.swift */,
+				8CBB3667285F7D6C009AFCC3 /* PipManagerList.swift */,
+				8CBB3669285F7D96009AFCC3 /* PipManagerData.swift */,
+			);
+			path = PipData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C81A77A285F29B8004FE6AA /* PythonSwiftLink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C81A7A0285F29BA004FE6AA /* Build configuration list for PBXNativeTarget "PythonSwiftLink" */;
+			buildPhases = (
+				8C81A777285F29B8004FE6AA /* Sources */,
+				8C81A778285F29B8004FE6AA /* Frameworks */,
+				8C81A779285F29B8004FE6AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PythonSwiftLink;
+			packageProductDependencies = (
+				8C81A81F285F2B4A004FE6AA /* PythonKit */,
+				8C81A822285F2B68004FE6AA /* CodeEditor */,
+				8C81A828285F2B83004FE6AA /* Gzip */,
+				8C81A82B285F2B95004FE6AA /* Highlightr */,
+				8C81A82E285F2BC4004FE6AA /* Realm */,
+				8C81A830285F2BC4004FE6AA /* RealmSwift */,
+				8C81A833285F2BE2004FE6AA /* SwiftUIWindow */,
+				8C81A836285F2BF5004FE6AA /* SwiftyBeaver */,
+				8C81A839285F2C07004FE6AA /* SwiftyJSON */,
+				8C81A83C285F2C20004FE6AA /* Zip */,
+			);
+			productName = PythonSwiftLink;
+			productReference = 8C81A77B285F29B8004FE6AA /* PythonSwiftLink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C81A78B285F29BA004FE6AA /* PythonSwiftLinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C81A7A3285F29BA004FE6AA /* Build configuration list for PBXNativeTarget "PythonSwiftLinkTests" */;
+			buildPhases = (
+				8C81A788285F29BA004FE6AA /* Sources */,
+				8C81A789285F29BA004FE6AA /* Frameworks */,
+				8C81A78A285F29BA004FE6AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C81A78E285F29BA004FE6AA /* PBXTargetDependency */,
+			);
+			name = PythonSwiftLinkTests;
+			productName = PythonSwiftLinkTests;
+			productReference = 8C81A78C285F29BA004FE6AA /* PythonSwiftLinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C81A795285F29BA004FE6AA /* PythonSwiftLinkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C81A7A6285F29BA004FE6AA /* Build configuration list for PBXNativeTarget "PythonSwiftLinkUITests" */;
+			buildPhases = (
+				8C81A792285F29BA004FE6AA /* Sources */,
+				8C81A793285F29BA004FE6AA /* Frameworks */,
+				8C81A794285F29BA004FE6AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C81A798285F29BA004FE6AA /* PBXTargetDependency */,
+			);
+			name = PythonSwiftLinkUITests;
+			productName = PythonSwiftLinkUITests;
+			productReference = 8C81A796285F29BA004FE6AA /* PythonSwiftLinkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C81A773285F29B8004FE6AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8C81A77A285F29B8004FE6AA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8C81A78B285F29BA004FE6AA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8C81A77A285F29B8004FE6AA;
+					};
+					8C81A795285F29BA004FE6AA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8C81A77A285F29B8004FE6AA;
+					};
+				};
+			};
+			buildConfigurationList = 8C81A776285F29B8004FE6AA /* Build configuration list for PBXProject "PythonSwiftLink" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C81A772285F29B8004FE6AA;
+			packageReferences = (
+				8C81A81E285F2B4A004FE6AA /* XCRemoteSwiftPackageReference "PythonKit" */,
+				8C81A821285F2B68004FE6AA /* XCRemoteSwiftPackageReference "CodeEditor" */,
+				8C81A827285F2B83004FE6AA /* XCRemoteSwiftPackageReference "GzipSwift" */,
+				8C81A82A285F2B95004FE6AA /* XCRemoteSwiftPackageReference "Highlightr" */,
+				8C81A82D285F2BC4004FE6AA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				8C81A832285F2BE2004FE6AA /* XCRemoteSwiftPackageReference "SwiftUIWindow" */,
+				8C81A835285F2BF5004FE6AA /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				8C81A838285F2C07004FE6AA /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				8C81A83B285F2C1F004FE6AA /* XCRemoteSwiftPackageReference "Zip" */,
+			);
+			productRefGroup = 8C81A77C285F29B8004FE6AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C81A77A285F29B8004FE6AA /* PythonSwiftLink */,
+				8C81A78B285F29BA004FE6AA /* PythonSwiftLinkTests */,
+				8C81A795285F29BA004FE6AA /* PythonSwiftLinkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C81A779285F29B8004FE6AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C81A786285F29BA004FE6AA /* Preview Assets.xcassets in Resources */,
+				8C81A783285F29BA004FE6AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C81A78A285F29BA004FE6AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C81A794285F29BA004FE6AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C81A777285F29B8004FE6AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C81A8F3285F2C54004FE6AA /* PipData.swift in Sources */,
+				8C81A7FD285F2A0B004FE6AA /* WrapArgProtocol.swift in Sources */,
+				8C81A989285F2D99004FE6AA /* KSLProjects.swift in Sources */,
+				8C81A904285F2C54004FE6AA /* SwiftUIView.swift in Sources */,
+				8C81A988285F2D99004FE6AA /* KSLWrapperBuild.swift in Sources */,
+				8C81A991285F31F7004FE6AA /* DirectoryWatcher.swift in Sources */,
+				8C81A8E7285F2C54004FE6AA /* ProjectInfoView.swift in Sources */,
+				8C81A8EF285F2C54004FE6AA /* PipJsonData.swift in Sources */,
+				8C81A8EE285F2C54004FE6AA /* WorkingFolderData.swift in Sources */,
+				8C81A8E4285F2C54004FE6AA /* NoConfigView.swift in Sources */,
+				8C81A7FF285F2A0B004FE6AA /* WrapperHandler.swift in Sources */,
+				8C81A8A8285F2C54004FE6AA /* DeleteProjectView.swift in Sources */,
+				8C81A7F3285F2A0A004FE6AA /* dataArg.swift in Sources */,
+				8C81A81D285F2A0B004FE6AA /* PythonObjectExtensionWriter.swift in Sources */,
+				8C81A7FE285F2A0B004FE6AA /* WrapModuleExtensions.swift in Sources */,
+				8C81A8EB285F2C54004FE6AA /* RecipeRowView.swift in Sources */,
+				8C81A98D285F2FE9004FE6AA /* PK+SwiftTypes.swift in Sources */,
+				8C81A801285F2A0B004FE6AA /* PyCallbackWrapper.swift in Sources */,
+				8C81A987285F2D99004FE6AA /* KSLDataModel.swift in Sources */,
+				8C81A8E3285F2C54004FE6AA /* AlertView.swift in Sources */,
+				8C81A7E7285F2A0A004FE6AA /* KSLUpdate.swift in Sources */,
+				8C81A7EA285F2A0A004FE6AA /* CommandLineFunctions.swift in Sources */,
+				8C81A986285F2D99004FE6AA /* XCProjectManager.swift in Sources */,
+				8C81A7F0285F2A0A004FE6AA /* SwiftCodeLayout.swift in Sources */,
+				8C81A7EC285F2A0A004FE6AA /* kslProjectExtension.swift in Sources */,
+				8C81A7E8285F2A0A004FE6AA /* Extensions_Helpers.swift in Sources */,
+				8C81A8E1285F2C54004FE6AA /* AppFilesChecker.swift in Sources */,
+				8C81A800285F2A0B004FE6AA /* WrapClass.swift in Sources */,
+				8C81A8F5285F2C54004FE6AA /* WorkingFolderData+Setup.swift in Sources */,
+				8C81A8EC285F2C54004FE6AA /* ProjectsCmdMenu.swift in Sources */,
+				8C81A902285F2C54004FE6AA /* PipDataRow.swift in Sources */,
+				8C81A8F6285F2C54004FE6AA /* ViewStates+Setup.swift in Sources */,
+				8C81A81C285F2A0B004FE6AA /* AutoDocGenerator.swift in Sources */,
+				8C81A7ED285F2A0A004FE6AA /* GeneratePythonCert.swift in Sources */,
+				8C81A8FF285F2C54004FE6AA /* SetupView.swift in Sources */,
+				8CBB3668285F7D6C009AFCC3 /* PipManagerList.swift in Sources */,
+				8C81A990285F31F7004FE6AA /* DirectoryDeepWatcher.swift in Sources */,
+				8C81A7F9285F2A0B004FE6AA /* WrapArgsProtocol.swift in Sources */,
+				8C81A80C285F2A0B004FE6AA /* PythonHandler.swift in Sources */,
+				8C81A8F9285F2C54004FE6AA /* CodeTemplates.swift in Sources */,
+				8C81A8F7285F2C54004FE6AA /* KSLProjectData+PList.swift in Sources */,
+				8C81A984285F2D99004FE6AA /* KSLDataModel+Setup.swift in Sources */,
+				8C81A983285F2D99004FE6AA /* GlobalAppData.swift in Sources */,
+				8C81A8E5285F2C54004FE6AA /* WrapperCodeEditor.swift in Sources */,
+				8C81A7EB285F2A0A004FE6AA /* version.swift in Sources */,
+				8C81A809285F2A0B004FE6AA /* WrapModule.swift in Sources */,
+				8C81A7F2285F2A0A004FE6AA /* boolArg.swift in Sources */,
+				8C81A8F8285F2C54004FE6AA /* FolderMonitor.swift in Sources */,
+				8C81A7F5285F2A0B004FE6AA /* objectArg.swift in Sources */,
+				8C81A7F6285F2A0B004FE6AA /* intArg.swift in Sources */,
+				8C81A8E9285F2C54004FE6AA /* CommandsMenu.swift in Sources */,
+				8C81A8FD285F2C54004FE6AA /* ProjectStatesModel.swift in Sources */,
+				8C81A7F7285F2A0B004FE6AA /* intEnumArg.swift in Sources */,
+				8C81A7F1285F2A0A004FE6AA /* jsonDataArg.swift in Sources */,
+				8C81A802285F2A0B004FE6AA /* Enums.swift in Sources */,
+				8C81A985285F2D99004FE6AA /* CommandQueueItem.swift in Sources */,
+				8C81A8E0285F2C54004FE6AA /* StatusTextViewer.swift in Sources */,
+				8C81A806285F2A0B004FE6AA /* CustomStructs.swift in Sources */,
+				8C81A903285F2C54004FE6AA /* PipListsManager.swift in Sources */,
+				8C81A81A285F2A0B004FE6AA /* SwiftGenerator.swift in Sources */,
+				8C81A8FA285F2C54004FE6AA /* KSLRealmDataModel.swift in Sources */,
+				8C81A805285F2A0B004FE6AA /* WrapFunction.swift in Sources */,
+				8C81A8F1285F2C54004FE6AA /* ViewStatesModel.swift in Sources */,
+				8C81A7FC285F2A0B004FE6AA /* floatArg.swift in Sources */,
+				8C81A8ED285F2C54004FE6AA /* WrapperCommandQueue.swift in Sources */,
+				8C81A80D285F2A0B004FE6AA /* RealmService.swift in Sources */,
+				8C81A80B285F2A0B004FE6AA /* WrapArgExtensions.swift in Sources */,
+				8C81A7E9285F2A0A004FE6AA /* ksl_paths.swift in Sources */,
+				8C81A907285F2C54004FE6AA /* KSLProjectAddon.swift in Sources */,
+				8C81A8F4285F2C54004FE6AA /* KSLViewLogger.swift in Sources */,
+				8C81A8E8285F2C54004FE6AA /* NewProjectView.swift in Sources */,
+				8C81A803285F2A0B004FE6AA /* Converters.swift in Sources */,
+				8C81A8FE285F2C54004FE6AA /* PythonHostRow.swift in Sources */,
+				8C81A8A9285F2C54004FE6AA /* PythonVenvRow.swift in Sources */,
+				8C81A8FB285F2C54004FE6AA /* GlobalFunctions.swift in Sources */,
+				8C81A900285F2C54004FE6AA /* PipVersionEditView.swift in Sources */,
+				8C81A7FA285F2A0B004FE6AA /* objectStrEnumArg.swift in Sources */,
+				8C81A905285F2C54004FE6AA /* EditProjectPList.swift in Sources */,
+				8C81A901285F2C54004FE6AA /* GlobalPipManager.swift in Sources */,
+				8C81A8F0285F2C54004FE6AA /* KSLWrapperData.swift in Sources */,
+				8C81A8FC285F2C54004FE6AA /* KSLDataModelNew.swift in Sources */,
+				8CBB366A285F7D96009AFCC3 /* PipManagerData.swift in Sources */,
+				8C81A8EA285F2C54004FE6AA /* RecentFoldersView.swift in Sources */,
+				8C81A808285F2A0B004FE6AA /* CustomEnums.swift in Sources */,
+				8C81A77F285F29B8004FE6AA /* PythonSwiftLinkApp.swift in Sources */,
+				8C81A807285F2A0B004FE6AA /* WrapArg.swift in Sources */,
+				8C81A906285F2C54004FE6AA /* Admob_Addon.swift in Sources */,
+				8C81A8E6285F2C54004FE6AA /* NewWrapperView.swift in Sources */,
+				8C81A908285F2C54004FE6AA /* ProjectsView.swift in Sources */,
+				8C81A98B285F2EFB004FE6AA /* ContentView.swift in Sources */,
+				8C81A7FB285F2A0B004FE6AA /* strArg.swift in Sources */,
+				8C81A81B285F2A0B004FE6AA /* PythonDownloader.swift in Sources */,
+				8C81A80A285F2A0B004FE6AA /* CodeLayouts.swift in Sources */,
+				8C81A8F2285F2C54004FE6AA /* KSLProjectData.swift in Sources */,
+				8C81A804285F2A0B004FE6AA /* WrapModule+Export.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C81A788285F29BA004FE6AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C81A791285F29BA004FE6AA /* PythonSwiftLinkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C81A792285F29BA004FE6AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C81A79D285F29BA004FE6AA /* PythonSwiftLinkUITestsLaunchTests.swift in Sources */,
+				8C81A79B285F29BA004FE6AA /* PythonSwiftLinkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C81A78E285F29BA004FE6AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C81A77A285F29B8004FE6AA /* PythonSwiftLink */;
+			targetProxy = 8C81A78D285F29BA004FE6AA /* PBXContainerItemProxy */;
+		};
+		8C81A798285F29BA004FE6AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C81A77A285F29B8004FE6AA /* PythonSwiftLink */;
+			targetProxy = 8C81A797285F29BA004FE6AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8C81A79E285F29BA004FE6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C81A79F285F29BA004FE6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8C81A7A1285F29BA004FE6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PythonSwiftLink/PythonSwiftLink.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1009;
+				DEVELOPMENT_ASSET_PATHS = "\"PythonSwiftLink/Preview Content\"";
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C81A7A2285F29BA004FE6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PythonSwiftLink/PythonSwiftLink.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1009;
+				DEVELOPMENT_ASSET_PATHS = "\"PythonSwiftLink/Preview Content\"";
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8C81A7A4285F29BA004FE6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PythonSwiftLink.app/Contents/MacOS/PythonSwiftLink";
+			};
+			name = Debug;
+		};
+		8C81A7A5285F29BA004FE6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PythonSwiftLink.app/Contents/MacOS/PythonSwiftLink";
+			};
+			name = Release;
+		};
+		8C81A7A7285F29BA004FE6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLinkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PythonSwiftLink;
+			};
+			name = Debug;
+		};
+		8C81A7A8285F29BA004FE6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLinkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PythonSwiftLink;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C81A776285F29B8004FE6AA /* Build configuration list for PBXProject "PythonSwiftLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C81A79E285F29BA004FE6AA /* Debug */,
+				8C81A79F285F29BA004FE6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C81A7A0285F29BA004FE6AA /* Build configuration list for PBXNativeTarget "PythonSwiftLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C81A7A1285F29BA004FE6AA /* Debug */,
+				8C81A7A2285F29BA004FE6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C81A7A3285F29BA004FE6AA /* Build configuration list for PBXNativeTarget "PythonSwiftLinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C81A7A4285F29BA004FE6AA /* Debug */,
+				8C81A7A5285F29BA004FE6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C81A7A6285F29BA004FE6AA /* Build configuration list for PBXNativeTarget "PythonSwiftLinkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C81A7A7285F29BA004FE6AA /* Debug */,
+				8C81A7A8285F29BA004FE6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C81A81E285F2B4A004FE6AA /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8C81A821285F2B68004FE6AA /* XCRemoteSwiftPackageReference "CodeEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZeeZide/CodeEditor.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8C81A827285F2B83004FE6AA /* XCRemoteSwiftPackageReference "GzipSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/1024jp/GzipSwift";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		8C81A82A285F2B95004FE6AA /* XCRemoteSwiftPackageReference "Highlightr" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raspu/Highlightr";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		8C81A82D285F2BC4004FE6AA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8C81A832285F2BE2004FE6AA /* XCRemoteSwiftPackageReference "SwiftUIWindow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mortenjust/SwiftUIWindow";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8C81A835285F2BF5004FE6AA /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8C81A838285F2C07004FE6AA /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8C81A83B285F2C1F004FE6AA /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C81A81F285F2B4A004FE6AA /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A81E285F2B4A004FE6AA /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+		8C81A822285F2B68004FE6AA /* CodeEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A821285F2B68004FE6AA /* XCRemoteSwiftPackageReference "CodeEditor" */;
+			productName = CodeEditor;
+		};
+		8C81A828285F2B83004FE6AA /* Gzip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A827285F2B83004FE6AA /* XCRemoteSwiftPackageReference "GzipSwift" */;
+			productName = Gzip;
+		};
+		8C81A82B285F2B95004FE6AA /* Highlightr */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A82A285F2B95004FE6AA /* XCRemoteSwiftPackageReference "Highlightr" */;
+			productName = Highlightr;
+		};
+		8C81A82E285F2BC4004FE6AA /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A82D285F2BC4004FE6AA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		8C81A830285F2BC4004FE6AA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A82D285F2BC4004FE6AA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		8C81A833285F2BE2004FE6AA /* SwiftUIWindow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A832285F2BE2004FE6AA /* XCRemoteSwiftPackageReference "SwiftUIWindow" */;
+			productName = SwiftUIWindow;
+		};
+		8C81A836285F2BF5004FE6AA /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A835285F2BF5004FE6AA /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		8C81A839285F2C07004FE6AA /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A838285F2C07004FE6AA /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		8C81A83C285F2C20004FE6AA /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C81A83B285F2C1F004FE6AA /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8C81A773285F29B8004FE6AA /* Project object */;
+}
