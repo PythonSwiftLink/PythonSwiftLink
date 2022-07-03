@@ -59,6 +59,18 @@ struct MainCommands: Commands {
                         
                 }
             }
+            
+            Menu("Import Export") {
+                Button("Import Pips") {
+                    
+                }
+                Button("Export Pips") {
+                    selectExportPath { url in
+                        model.pipManager.export(path: url)
+                    }
+                    
+                }
+            }
         }
 
     }

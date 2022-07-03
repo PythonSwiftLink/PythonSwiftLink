@@ -30,7 +30,7 @@ class WorkingFolderData: Object, ObjectKeyIdentifiable {
     
     @Published var setupIsDone = false
     
-    @Persisted var python_lib_each_project = false
+    @Persisted var python_lib_each_project = true
     @Persisted var plep_locked = false
     
     var external_host_python = false

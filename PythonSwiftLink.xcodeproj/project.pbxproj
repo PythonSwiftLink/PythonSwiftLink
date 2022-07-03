@@ -306,10 +306,10 @@
 		8C81A77D285F29B8004FE6AA /* PythonSwiftLink */ = {
 			isa = PBXGroup;
 			children = (
-				8C81A787285F29BA004FE6AA /* PythonSwiftLink.entitlements */,
 				8C81A87F285F2C50004FE6AA /* AlertView.swift */,
 				8C81A87D285F2C50004FE6AA /* AppFilesChecker.swift */,
 				8C81A885285F2C52004FE6AA /* CommandsMenu.swift */,
+				8C81A787285F29BA004FE6AA /* PythonSwiftLink.entitlements */,
 				8C81A98A285F2EFB004FE6AA /* ContentView.swift */,
 				8C81A83E285F2C4F004FE6AA /* DeleteProjectView.swift */,
 				8C81A98E285F31F7004FE6AA /* DirectoryDeepWatcher.swift */,
@@ -851,7 +851,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -906,7 +906,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -923,7 +923,7 @@
 				CODE_SIGN_ENTITLEMENTS = PythonSwiftLink/PythonSwiftLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1009;
+				CURRENT_PROJECT_VERSION = 1011;
 				DEVELOPMENT_ASSET_PATHS = "\"PythonSwiftLink/Preview Content\"";
 				DEVELOPMENT_TEAM = U7AZRR7LN3;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -935,6 +935,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -951,7 +952,7 @@
 				CODE_SIGN_ENTITLEMENTS = PythonSwiftLink/PythonSwiftLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1009;
+				CURRENT_PROJECT_VERSION = 1011;
 				DEVELOPMENT_ASSET_PATHS = "\"PythonSwiftLink/Preview Content\"";
 				DEVELOPMENT_TEAM = U7AZRR7LN3;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -963,6 +964,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.PythonSwiftLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";

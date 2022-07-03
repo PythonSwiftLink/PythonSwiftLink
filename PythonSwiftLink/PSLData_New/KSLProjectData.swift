@@ -44,7 +44,10 @@ class KSLProjectData: Object, ObjectKeyIdentifiable {
     @Persisted var wrapper_builds: List<KSLWrapperData>
     //var wrapper_builds_array: [KSLWrapperData] { Array(wrapper_builds) }
     @Persisted var pips: PipManagerList?
-    @Persisted var installed_pips: List<PipData>
+    @Persisted var installed_pips: List<String>
+    @Persisted var uninstalled_pips: List<String>
+    
+    
     
     @Persisted var bridge_header: String
     var bridge_header_url: URL {
@@ -72,9 +75,9 @@ class KSLProjectData: Object, ObjectKeyIdentifiable {
 
     var c_headers: URL { headers.appendingPathComponent("c", isDirectory: true) }
 
-    var swift_headers: URL { headers.appendingPathComponent("swift", isDirectory: true)}
+    var swift_headers: URL { headers.appendingPathComponent("swift", isDirectory: true) }
 
-    var python_lib: URL { url.appendingPathComponent("lib", isDirectory: true)}
+    var python_lib: URL { url.appendingPathComponent("lib", isDirectory: true) }
     
     var dummy: Bool = false
     
@@ -345,7 +348,21 @@ extension KSLProjectData {
             let admob_target_url = project_dir.appendingPathComponent("Admob_handler.swift")
             print(admob_file_url)
             print(admob_target_url)
-            copyItem(from: admob_file_url.path, to: admob_target_url.path, force: true)
+            
+            var admob_id = "ca-app-pub-3940256099942544~1458002511"
+            if let admob_addon = addons.first(where: {$0.type == "admob"}) {
+                if let gad_app_id_item = admob_addon.plist_items.first(where: {$0.key == "GADApplicationIdentifier"}) {
+                    if let gad_app_id = gad_app_id_item.value.stringValue {
+                        admob_id = gad_app_id
+                    }
+                }
+                
+            }
+            
+            let admob_handler_string = try? String(contentsOf: admob_file_url).replacingOccurrences(of: "#adUnitID", with: admob_id)
+            
+            //copyItem(from: admob_file_url.path, to: admob_target_url.path, force: true)
+            try? admob_handler_string?.write(to: admob_target_url, atomically: true, encoding: .utf8)
             xc_proj.add_file(admob_target_url.path, parent: sources)
         }
         
@@ -506,10 +523,82 @@ extension KSLProjectData {
             for removed in lib_items_to_be_removed { deleteLibFile(recipe_name: removed) }
         }
         if let pips = pips {
-            var args = ["install"]
-            args.append(contentsOf: pips.pips.map{ $0.full_name })
-            runToolchain_GUI(command: .pip, args: args) { log in
-                print(log)
+            //var args = ["install"]
+            var installs = [String]()
+            installs.append(contentsOf: pips.pips.filter{$0.deleted == false}.map {$0.full_name})
+            var deletes = [String]()
+            deletes.append(contentsOf: pips.pips.filter{$0.deleted == true}.map {$0.full_name})
+            print(installs)
+            
+            for install in installs {
+                if !installed_pips.contains(install) {
+                    let result = runToolchain_GUI(
+                        command: .pip,
+                        args: ["install", install]
+                        ) { log in
+                            print(log)
+                        }
+                    if result == 0 {
+                        guard let this = self.thaw() else { continue }
+                        if let realm = this.realm {
+                            
+                            try? realm.write {
+                                this.installed_pips.append(install)
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+            //args.append(contentsOf: pips.pips.map{ $0.full_name })
+            
+            
+            if deletes.count > 0 {
+                print("deleted pips:\n")
+                print(deletes)
+                for del in deletes {
+                    if !uninstalled_pips.contains(del) {
+                        let result = runToolchain_GUI(
+                            command: .pip,
+                            args: ["uninstall", "-y", del]
+                            ) { log in
+                                print(log)
+                            }
+                        if result == 0 {
+                            guard let this = self.thaw() else { continue }
+                            if let realm = this.realm {
+                                
+                                try? realm.write {
+                                    this.uninstalled_pips.append(del)
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+            let installed_set = Set(installed_pips)
+            let removed_from_list = installed_set.find_missing(compare_array: installs)
+            print(removed_from_list)
+            for removed in removed_from_list {
+                let result = runToolchain_GUI(
+                    command: .pip,
+                    args: ["uninstall", "-y", removed]
+                    ) { log in
+                        print(log)
+                    }
+                if result == 0 {
+                    guard let this = self.thaw() else { continue }
+                    guard let index = this.installed_pips.firstIndex(of: removed) else { continue }
+                    if let realm = this.realm {
+                        
+                        try? realm.write {
+                            this.installed_pips.remove(at: index)
+                        }
+                    }
+                }
             }
         }
         
@@ -655,5 +744,18 @@ extension Array where Element == String {
     func find_missing(compare_array: [String]) -> [String]{
         return Array(Set(self).subtracting(compare_array))
     }
+    
+    func find_missing(compare_set: Set<String>) -> [String]{
+        return Array(Set(self).subtracting(compare_set))
+    }
 }
 
+extension Set where Element == String {
+    func find_missing(compare_array: [String]) -> [String]{
+        return Array(self.subtracting(compare_array))
+    }
+    
+    func find_missing(compare_set: Set<String>) -> [String]{
+        return Array(self.subtracting(compare_set))
+    }
+}

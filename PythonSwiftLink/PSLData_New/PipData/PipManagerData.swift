@@ -7,7 +7,7 @@ import Combine
 
 var preview_pips = PipManagerData.preview_pips()
 
-class PipManagerData: ObservableObject {
+class PipManagerData: ObservableObject, Encodable {
     
     //private(set) var realm: Realm?
     var realm: Realm?
@@ -25,6 +25,7 @@ class PipManagerData: ObservableObject {
     
     @Published var pipEditStates = [ObjectId: Bool]()
     
+    weak var rootmodel: KSLDataModelNew?
     
     var avail_pips: [PipData] {
         guard let pips = pips else {
@@ -143,15 +144,26 @@ class PipManagerData: ObservableObject {
             for ver in pip.versions {
                 realm.delete(ver)
             }
-            for list in pip.used_by_lists {
-                if let pos = list.pips.firstIndex(of: pip) {
-                    list.pips.remove(at: pos)
-                }
-            }
+//            for list in pip.used_by_lists {
+//                if let pos = list.pips.firstIndex(of: pip) {
+//                    list.pips.remove(at: pos)
+//                }
+//            }
             //realm.delete(pip)
             pip.deleted = true
             //pip.removeObserver(<#T##observer: NSObject##NSObject#>, forKeyPath: <#T##String#>)
-            
+            for list in pip.used_by_lists {
+                for project in list.used_by_projects {
+//                    if project.installed_pips.contains(pip) {
+//                        guard let project = project.thaw() else { continue }
+//                        
+//                    }
+//                    if !project.uninstalled_pips.contains(pip) {
+//                        guard let project = project.thaw() else { continue }
+//                        
+//                    }
+                }
+            }
         }
         
     }
@@ -192,4 +204,58 @@ class PipManagerData: ObservableObject {
         
     }
     
+    func updateProjectsPips() async {
+        guard let pips = pips else { return }
+        guard let rootmodel = rootmodel else {return}
+        guard let recentFolder = rootmodel.recentFolder else { return }
+        //var projects2handle = [KSLProjectData: Set<PipData>]()
+        var projects2update = Set<KSLProjectData>()
+        
+        for pip in pips.filter({$0.deleted}) {
+            for list in pip.used_by_lists {
+                for project in list.used_by_projects.filter({recentFolder.projects.contains($0)}) {
+                    projects2update.insert(project)
+                }
+            }
+        }
+       
+       
+            for project in projects2update {
+                //rootmodel.
+                await project.updateProject()
+                
+            }
+        
+    }
+    
+    private enum ExportCodingKeys: CodingKey {
+        case pips
+        case pip_lists
+        case recentFolder
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: ExportCodingKeys.self)
+        try c.encode(pips, forKey: .pips)
+        try c.encode(pip_lists, forKey: .pip_lists)
+    }
+    
+    
+    
+    func export(path: URL) {
+        let encoder = JSONEncoder()
+        guard let data = try? encoder.encode(self) else { return }
+        
+        let export_path = path.path as NSString
+        let pathExtention = export_path.pathExtension
+        let fileName = export_path.deletingPathExtension
+        
+        print(pathExtention, pathExtention == "")
+        print(fileName)
+        let export_url = URL(fileURLWithPath: "\(fileName).json")
+        try? data.write(to: export_url)
+        
+        
+        
+    }
 }

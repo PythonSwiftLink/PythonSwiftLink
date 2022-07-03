@@ -52,16 +52,7 @@ struct PipDataEditPopover: View {
                     PipVersionEditView(version: v)
                 }
             }
-            if pip.versions.count < 2 {
-                Button("&&") {
-                    guard let list = pip.versions.thaw() else { return }
-                    guard let realm = list.realm else { return }
-                    let new = PipVersion(version: "", op: "<=")
-                    try? realm.write {
-                        list.append(new)
-                    }
-                }
-            }
+
         }.padding()
     }
 }

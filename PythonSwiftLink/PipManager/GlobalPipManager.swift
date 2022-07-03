@@ -12,6 +12,9 @@ struct GlobalPipManager: View {
     
     @ObservedObject var pip_man: PipManagerData
     @State var selection: PipData?
+    @State var removeTest = false
+    
+    
     var body: some View {
         HStack {
             ZStack {
@@ -74,6 +77,8 @@ struct GlobalPipManager: View {
         }
         .padding()
         .frame(height: 640)
+        
+
     }
 }
 

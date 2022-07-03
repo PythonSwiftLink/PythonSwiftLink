@@ -24,10 +24,10 @@ struct PipDataRow: View {
     var body: some View {
         HStack{
             Text(pip.name)
-            if pip.git_string.count > 0 {
-                Text(pip.git_string)
+            if let git_string = pip.git_string {
+                Text(git_string)
             }
-            Text(pip.versions.first?.versionOperator ?? "")
+            Text(pip.versions.first?.versionOperator.rawValue ?? "")
             Text(pip.versions.first?.version ?? "")
         }
         
@@ -54,10 +54,10 @@ struct PipDataRowList: View {
     var body: some View {
         HStack{
             Text(pip.name)
-            if pip.git_string.count > 0 {
-                Text(pip.git_string)
+            if let git_string = pip.git_string {
+                Text(git_string)
             }
-            Text(pip.versions.first?.versionOperator ?? "")
+            Text(pip.versions.first?.versionOperator.rawValue ?? "")
             Text(pip.versions.first?.version ?? "")
         }
 

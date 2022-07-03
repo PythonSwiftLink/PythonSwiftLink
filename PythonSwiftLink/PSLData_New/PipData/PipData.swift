@@ -29,18 +29,19 @@ enum PipOperator: String, PersistableEnum, Codable, CaseIterable {
     case GE = ">="
     case LT = "<"
     case GT = ">"
+    case GITLINK = "@"
 }
 
 class PipVersion: Object, ObjectKeyIdentifiable, Codable {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var versionOperator: String
+    @Persisted var versionOperator: PipOperator
     @Persisted var version: String
     @Persisted(originProperty: "versions") var used_by_pip: LinkingObjects<PipData>
     
     convenience init(version: String, op: String) {
         self.init()
         self.version = version
-        self.versionOperator = op
+        self.versionOperator = PipOperator(rawValue: op)!
     }
     
     private enum CodingKeys: CodingKey {
@@ -71,10 +72,10 @@ class PipVersion: Object, ObjectKeyIdentifiable, Codable {
 }
 
 
-class PipData: Object, ObjectKeyIdentifiable {
+class PipData: Object, Encodable,  ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var name: String
-    @Persisted var git_string: String
+    @Persisted var git_string: String?
     @Persisted var versions: List<PipVersion>
     @Persisted var jsondata: Data?
     @Persisted var deleted: Bool = false
@@ -82,12 +83,28 @@ class PipData: Object, ObjectKeyIdentifiable {
     
     var full_name: String {
         guard let first = versions.first else { return name }
-        return "\(name)\(first.versionOperator)\(first.version)"
+        
+        if first.versionOperator == .GITLINK {
+            
+            if deleted { return name }
+            if let gstring = git_string {
+                return "git+\(gstring)"
+            }
+        }
+        
+        return "\(name)\(first.versionOperator.rawValue)\(first.version)"
     }
     private enum PipDataCodingKeys: CodingKey {
         case name
         case git_string
         case versions
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: PipDataCodingKeys.self)
+        try c.encode(name, forKey: .name)
+        try c.encode(git_string, forKey: .git_string)
+        try c.encode(versions, forKey: .versions)
     }
     
 //    required init(from decoder: Decoder) throws {

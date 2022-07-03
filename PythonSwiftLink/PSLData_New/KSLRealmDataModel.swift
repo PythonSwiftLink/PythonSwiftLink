@@ -116,7 +116,10 @@ class KSLRealmDataModel: ObservableObject {
                     this.realm?.add(KSLDataModelNew.init(file: nil))
                 }
             }
+            this.pipManager.rootmodel = this.result
         }
+        
+        
     }
     
     func setupObserver() {

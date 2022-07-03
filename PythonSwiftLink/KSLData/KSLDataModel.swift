@@ -496,7 +496,40 @@ class KSLDataModel: ObservableObject {
 }
 
 
-
+func selectExportPath(_ complete: @escaping ( (URL)->Void )) {
+    
+    
+    let folderChooserPoint = CGPoint(x: 0, y: 0)
+    let folderChooserSize = CGSize(width: 500, height: 600)
+    let folderChooserRectangle = CGRect(origin: folderChooserPoint, size: folderChooserSize)
+    //let folderPicker = NSOpenPanel(contentRect: folderChooserRectangle, styleMask: .utilityWindow, backing: .buffered, defer: true)
+    let folderPicker = NSSavePanel(contentRect: folderChooserRectangle, styleMask: .utilityWindow, backing: .buffered, defer: true)
+    //folderPicker.canChooseDirectories = false
+    //folderPicker.canChooseFiles
+//    folderPicker.can
+    //folderPicker.canChooseFiles = true
+    //folderPicker.allowsMultipleSelection = false
+    folderPicker.canCreateDirectories = true
+    //folderPicker.canDownloadUbiquitousContents = true
+    //folderPicker.canResolveUbiquitousConflicts = true
+    
+    folderPicker.begin { response in
+        switch response {
+        case .OK:
+            //print(folderPicker.urls)
+            if let url = folderPicker.url {
+                complete(url)
+            }
+        case .cancel:
+            print("canceled")
+            
+        default:
+            print(response)
+        }
+        
+        
+    }
+}
 
 func selectFolder(_ complete: @escaping ( (URL)->Void )) {
     

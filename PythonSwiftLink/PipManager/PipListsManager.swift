@@ -32,21 +32,30 @@ struct PipListsViewer: View {
     //@State var sel: PipManagerList?
     var body: some View {
         VStack {
-            if let lists = pip_man.pip_lists {
-                UIList(lists, id: \.self, selection: $pip_man.selected_pip_list) { n in
-                    Text(n.name)
+            ZStack {
+                if let lists = pip_man.pip_lists {
+                    UIList(lists, id: \.self, selection: $pip_man.selected_pip_list) { n in
+                        Text(n.name)
+                    }
                     
+                } else {EmptyView()}
+            }.frame(height: 520)
+                
+            VStack {
+                HStack {
+                    Button("Create") {
+                        pip_man.create(pip_list: "list\(pip_man.pip_lists?.count ?? 0)")
+                    }
+                    Button("Delete") {
+                        
+                    }
                     
                 }
-            } else { EmptyView() }
-            
-            HStack {
-                Button("Create") {
-                    pip_man.create(pip_list: "list\(pip_man.pip_lists?.count ?? 0)")
-                }
-                Button("Delete") {
+                Spacer()
+                Button("Update Projects") {
                     
                 }
+                Spacer()
             }
         }
         
@@ -63,7 +72,7 @@ struct CurrentPipListViewer: View {
         VStack {
             
             UIList(selection: _selections) {
-                ForEach(pip_list.pips, id: \.self) { pip in
+                ForEach(pip_list.filtered_pips, id: \.self) { pip in
                     PipDataRowList(pip: pip)
                 }
             }
