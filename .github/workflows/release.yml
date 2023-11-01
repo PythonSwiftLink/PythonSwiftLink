@@ -19,7 +19,10 @@ jobs:
     permissions:
         contents: write
     steps:
-
+      - name: Set Version
+        id: version
+        run: |
+            echo "var=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v4
       - name: Clone Github Repo
         # uses: whyakari/github-repo-action@809aeef1050b89b6f64d36fb9893c5e9ceaecbba
