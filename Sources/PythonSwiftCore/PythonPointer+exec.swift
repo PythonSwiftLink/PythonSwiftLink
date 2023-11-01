@@ -12,7 +12,7 @@ public enum PyEvalFlag: Int32 {
     
     
 }
-#if BEEWARE
+//#if BEEWARE
 
 public func Py_ValidateCode(code: String,  filename: String, flag: PyEvalFlag) -> Bool {
     print("Py_CompileString:\n", code)
@@ -48,7 +48,7 @@ public func Py_CompileString(code: String,  filename: String, flag: PyEvalFlag) 
         return result
     }
 }
-#endif
+//#endif
 
 public func PyRun_String(string: String, flag: PyEvalFlag, globals: PyPointer, locals: PyPointer) -> PyPointer? {
     string.withCString { str in
