@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PythonCore",
+        "repositoryURL": "https://github.com/PythonSwiftLink/PythonCore",
+        "state": {
+          "branch": null,
+          "revision": "97849e8d5af7f18381d40652a17a93e96017359a",
+          "version": "311.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

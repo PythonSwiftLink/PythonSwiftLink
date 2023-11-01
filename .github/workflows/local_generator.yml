@@ -1,0 +1,82 @@
+# This workflow will build a Swift project
+
+
+
+name: LocalGenerator
+
+
+on:
+  push: 
+    branches: [
+      "master"
+      #"testing"
+      ]
+
+
+
+
+jobs:
+  mainJob:
+    #needs: mainjob1
+    runs-on: ubuntu-latest
+    permissions:
+        contents: write
+    steps:
+
+      - uses: actions/checkout@v3
+  
+    #   - name: retrieve output
+    #     run: |
+    #       echo "${{ needs.mainjob1.outputs.version }}"
+    #       echo "${{ needs.mainjob1.outputs.sha }}"
+
+      
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # install the python version needed
+
+      - name: install python packages
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install cookiecutter
+        
+    #   - name: generate cookie
+    #     run: python3.10 generate_formula.py ${{ needs.mainjob1.outputs.version }} ${{ needs.mainjob1.outputs.sha }}
+
+
+      - name: clone tools and update
+        run: |
+            mkdir output
+            cd output
+            mkdir out
+            cd ..
+
+            curl https://gist.githubusercontent.com/PythonSwiftLink/5c440bebe05e620c26f3bf579f293c33/raw/ba659183ba5e9ca9c8c22838eb8853d7926f327a/psl_cookiecutter.json --output output/cookiecutter.json
+
+            mv Package.swift output/out
+            mv Sources output/out
+            cd output/out/Sources/PythonLib/include
+    
+            curl https://gist.githubusercontent.com/PythonSwiftLink/e3c28e165b21bb895f6d2ce429b816df/raw/907f309b1038193f0a4871fa209cab2d8023702a/pylib_h.py --output pylib_h.py
+            python3 pylib_h.py
+            rm -f pylib_h.py
+            rm -f PythonLib.h
+            cd ..
+            rm -rf Python.xcframework
+            cd ../../
+            
+            mv Sources {{\ cookiecutter.sources\ }}
+            cd ..
+            mv out {{\ cookiecutter.lib\ }}
+
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.Homebrew }}
+        with:
+          source-directory: 'output'
+          destination-github-username: 'pythonswiftlink'
+          destination-repository-name: 'PythonSwiftLink'
+          user-email: pythonswiftlink@gmail.com
+          target-branch: local
