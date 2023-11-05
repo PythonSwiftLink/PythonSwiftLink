@@ -25,6 +25,9 @@ jobs:
   # Single deploy job since we're just deploying
   docc:
     runs-on: macos-13
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,30 +36,14 @@ jobs:
           swift package --allow-writing-to-directory ./docs \
             generate-documentation --target PythonSwiftCore --output-path ./docs \
             --transform-for-static-hosting --hosting-base-path PythonSwiftCore
-      - uses: actions/upload-artifact@v3
-        with:
-          name: docs-output
-          path: ./docs
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: [docc]
-    runs-on: ubuntu-latest
-    steps:
-    
-      - name: Checkout
-        uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
-        with:
-          name: docs-output
+      
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
-          path: '.'
+          path: '.docs'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
