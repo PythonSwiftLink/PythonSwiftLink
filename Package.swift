@@ -17,7 +17,8 @@ let package = Package(
 		),
 	],
 	dependencies: [
-		.package(url: "https://github.com/PythonSwiftLink/PythonCore", .upToNextMajor(from: .init(311, 0, 0)))
+		.package(url: "https://github.com/PythonSwiftLink/PythonCore", .upToNextMajor(from: .init(311, 0, 0))),
+		.package(url: "https://github.com/apple/swift-docc-plugin", from: "1.1.0"),
 		//.package(url: "https://github.com/PythonSwiftLink/PythonTestSuite", branch: "master"),
 	],
 	
