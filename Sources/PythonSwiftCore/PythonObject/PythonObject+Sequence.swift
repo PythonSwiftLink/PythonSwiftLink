@@ -2,7 +2,8 @@ import Foundation
 import PythonCore
 //import PythonTypeAlias
 
-class PyArray<T: PyConvertible>: PySequenceProtocol {
+class PyArray<T: PyConvertible> {
+
     
     var list: [T]
     
@@ -16,7 +17,8 @@ class PyArray<T: PyConvertible>: PySequenceProtocol {
     }
 }
 
-class PySequence<T: PyConvertible>: PySequenceProtocol {
+class PySequence<T: PyConvertible> {
+
     
     let handler: (Int) -> T?
     init(_ handler: @escaping (Int) -> T?) {
