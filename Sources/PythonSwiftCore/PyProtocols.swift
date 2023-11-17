@@ -25,7 +25,13 @@ public protocol PyBufferStructProtocol {
 
 
 public protocol PySequenceProtocol {
+	func __len__() -> Int
+	func __add__(value: PyPointer) -> PyPointer?
+	func __iadd__(value: PyPointer)
     func __getitem__(idx: Int) -> PyPointer?
+	func __setitem__(idx: Int, value: PyPointer?) -> Int32
+	func __repeat__(count: Int, value: PyPointer?) -> PyPointer?
+	func __irepeat__(count: Int, value: PyPointer?)
 }
 
 public protocol PyMappingProtocol {
