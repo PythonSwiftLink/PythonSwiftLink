@@ -4,3 +4,6 @@
 .swiftpm/
 
 .*resolved
+Package.resolved
+Package.resolved
+*.resolved
