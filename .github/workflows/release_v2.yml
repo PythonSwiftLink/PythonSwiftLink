@@ -47,9 +47,9 @@ jobs:
       - name: repack
         run: |
           python repack.py
-          mv -f _PythonSwiftLink/Package.swift _PythonSwiftLink/Package.swift
-          mv -f _PythonSwiftLink/Sources _PythonSwiftLink/Sources
-          mv -f _PythonSwiftLink/Tests _PythonSwiftLink/Tests
+          mv -f _PythonSwiftLink/Package.swift PythonSwiftLink/Package.swift
+          mv -f _PythonSwiftLink/Sources PythonSwiftLink/Sources
+          mv -f _PythonSwiftLink/Tests PythonSwiftLink/Tests
 
 
       # commit new package to kivypythoncore/master
