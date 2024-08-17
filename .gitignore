@@ -6,3 +6,4 @@
 .*resolved
 Package.resolved
 Package.resolved
+*.resolved
