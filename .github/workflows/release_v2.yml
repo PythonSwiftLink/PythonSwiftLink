@@ -29,7 +29,7 @@ jobs:
         uses: whyakari/github-repo-action@v3.1
         with:
           owner: PythonSwiftLink
-          repository: KivySwiftLink
+          repository: PythonSwiftLink
           access-token: ${{ secrets.ksl }}
           branch: master
       
