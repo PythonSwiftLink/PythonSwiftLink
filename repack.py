@@ -1,11 +1,11 @@
-
+package_path = "PythonSwiftLink/Packqge.swift"
 def get_package_swift() -> str:
     text = ""
-    with open("Package.swift", "r") as rf:
+    with open(package_path, "r") as rf:
         text = rf.read()
     return text
 
-with open("Package.swift", "w") as f:
+with open(package_path, "w") as f:
     old = "PythonSwiftLink/PythonCore"
     new = "KivySwiftLink/PythonCore"
     package_text = get_package_swift().replace(old, new)
