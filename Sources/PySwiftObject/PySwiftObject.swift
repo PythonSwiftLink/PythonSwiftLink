@@ -1,4 +1,7 @@
 import Foundation
+@_exported import _PySwiftObject
+import PySwiftCore
+import PythonCore
 //import PythonSwiftCore
 //import PythonTypeAlias
 
@@ -24,3 +27,76 @@ import Foundation
 //	//count = _count
 //	return .init(result)
 //}
+
+
+
+
+
+func allocPySwiftObject(type: UnsafeMutablePointer<PyTypeObject>?) -> PyPointer? {
+	type?.pointee.tp_alloc?(type, 0)
+}
+
+
+func unpackStruct<T>(_ object: PyPointer) throws -> T {
+	let ps_object = unsafeBitCast(object, to: PySwiftObject.self)
+	guard let raw = ps_object.swift_ptr else { throw PythonError.type("Swift Pointer not set") }
+	return raw.withMemoryRebound(to: T.self, capacity: 1) { pointer in
+		pointer.pointee
+	}
+}
+
+func updateStruct<T>(_ object: PyPointer, key: KeyPath<T, Void>, _: T.Type) throws {
+	let ps_object = unsafeBitCast(object, to: PySwiftObject.self)
+	guard let raw = ps_object.swift_ptr else { throw PythonError.type("Swift Pointer not set") }
+	raw.withMemoryRebound(to: String.self, capacity: 1) { pointer in
+		//pointer.pointee[keyPath: key]
+	}
+}
+
+func getPropertyStruct<T,R>(_ object: PySwiftObjectPointer, key: KeyPath<T, R>) throws -> R {
+	guard let raw = object?.pointee.swift_ptr else { throw PythonError.type("Swift Pointer not set") }
+	return raw.withMemoryRebound(to: T.self, capacity: 1) { pointer in
+		pointer.pointer(to: key)!.pointee
+	}
+}
+
+func setPropertyStruct<Struct, Value>(for item: Struct, keyPath: WritableKeyPath<Struct, Value>, value: Value) {
+	//item[keyPath: keyPath] = value
+}
+
+func howSwiftonizeMustDo(item: PySwiftObjectPointer) throws {
+	guard let raw = item?.pointee.swift_ptr else { throw PythonError.type("Swift Pointer not set") }
+	return raw.withMemoryRebound(to: TestStruct.self, capacity: 1) { pointer in
+		pointer.pointee.a = "hello"
+	}
+}
+
+func setPropertyClass<Struct, Value>(for item: PySwiftObjectPointer, keyPath: WritableKeyPath<Struct, Value>, value: Value) throws {
+	guard let raw = item?.pointee.swift_ptr else { throw PythonError.type("Swift Pointer not set") }
+	return raw.withMemoryRebound(to: Struct.self, capacity: 1) { pointer in
+		pointer.pointer(to: keyPath)!.pointee = value
+	}
+}
+
+fileprivate struct TestStruct {
+	var a: String
+}
+
+
+fileprivate func playground() throws {
+	
+	let py_swift_object: PySwiftObjectPointer = nil
+	
+	let string = try getPropertyStruct(py_swift_object, key: \TestStruct.a )
+													// wtf 	 ^^^^^^^^^^^^^
+	
+	try setPropertyClass(for: py_swift_object, keyPath: \TestStruct.a, value: "hello")
+	
+	
+//	let getter: PySwift_getter = {s, _ in
+//		if let a = try? getPropertyStruct(s, key: \TestStruct.a) {
+//			return a.pyPointer
+//		}
+//		return .None
+//	}
+}

@@ -1,5 +1,5 @@
 import Foundation
-import PythonSwiftCore
+import PySwiftCore
 //import PythonTypeAlias
 
 
