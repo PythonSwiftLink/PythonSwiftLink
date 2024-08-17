@@ -30,12 +30,26 @@ jobs:
         with:
           owner: PythonSwiftLink
           repository: PythonSwiftLink
+          access-token: ${{ secrets.Homebrew }}
+          branch: master
+      - name: Move PSL
+        run: mv PythonSwiftLink _PythonSwiftLink
+      - name: Clone KSL Github Repo
+        # uses: whyakari/github-repo-action@809aeef1050b89b6f64d36fb9893c5e9ceaecbba
+        uses: whyakari/github-repo-action@v3.1
+        with:
+          owner: KivySwiftLink
+          repository: PythonSwiftLink
           access-token: ${{ secrets.ksl }}
           branch: master
       
         
       - name: repack
-        run: python repack.py 
+        run: |
+          python repack.py
+          mv -f _PythonSwiftLink/Package.swift _PythonSwiftLink/Package.swift
+          mv -f _PythonSwiftLink/Sources _PythonSwiftLink/Sources
+          mv -f _PythonSwiftLink/Tests _PythonSwiftLink/Tests
 
 
       # commit new package to kivypythoncore/master
