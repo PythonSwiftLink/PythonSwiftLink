@@ -1,4 +1,5 @@
 package_path = "PythonSwiftLink/Package.swift"
+
 def get_package_swift() -> str:
     text = ""
     with open(package_path, "r") as rf:
