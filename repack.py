@@ -5,7 +5,7 @@ def get_package_swift() -> str:
         text = rf.read()
     return text
 
-with open("Package.swift", "r") as f:
+with open("Package.swift", "w") as f:
     old = "PythonSwiftLink/PythonCore"
     new = "KivySwiftLink/PythonCore"
     package_text = get_package_swift().replace(old, new)
