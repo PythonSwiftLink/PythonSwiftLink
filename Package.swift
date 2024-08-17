@@ -64,10 +64,10 @@ let package = Package(
 		),
 	],
 	dependencies: [
-//		.package(path: "/Volumes/CodeSSD/GitHub/Python"),
+
 		.package(url: "https://github.com/PythonSwiftLink/PythonCore", .upToNextMajor(from: .init(311, 0, 0))),
-		//.package(url: "https://github.com/PythonSwiftLink/PythonTestSuite", branch: "master"),
-			.package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+		.package(url: "https://github.com/apple/swift-docc-plugin", from: "1.1.0"),
+
 	],
 	
 	targets: [
