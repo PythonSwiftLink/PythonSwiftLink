@@ -7,11 +7,15 @@ import PythonCore
 
 
 
-public func PyBuffer_FillInfo<B: PyBufferProtocol>(src: inout B, buffer: UnsafeMutablePointer<Py_buffer>) -> Int32 {
+public func PyBuffer_FillInfo<B: StaticPyBufferProtocol>(src: inout B, buffer: UnsafeMutablePointer<Py_buffer>) -> Int32 {
 	B.__fill_buffer__(src: &src, buffer: buffer)
 }
 
 public protocol PyBufferProtocol {
+	func __buffer__(s: PyPointer, buffer: UnsafeMutablePointer<Py_buffer>) -> Int32
+}
+
+public protocol StaticPyBufferProtocol {
 	static func __fill_buffer__(src: inout Self, buffer: UnsafeMutablePointer<Py_buffer>) -> Int32
 }
 public protocol PyBufferProtocol_AnyClass: AnyObject {
