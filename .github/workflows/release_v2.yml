@@ -48,7 +48,7 @@ jobs:
         run: |
           python repack.py
           mv -f _PythonSwiftLink/Package.swift PythonSwiftLink/Package.swift
-          mv -f _PythonSwiftLink/Sources PythonSwiftLink/Sources
+          mv -f _PythonSwiftLink/Sources/* PythonSwiftLink/Sources/
           mv -f _PythonSwiftLink/Tests PythonSwiftLink/Tests
 
 
