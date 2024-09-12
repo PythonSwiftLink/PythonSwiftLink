@@ -65,6 +65,13 @@ extension PyPointer : PyEncodable {
     
 }
 
+extension Optional: PyEncodable where Wrapped: PyEncodable {
+	public var pyPointer: PyPointer {
+		self?.pyPointer ?? .None
+	}
+}
+
+
 //extension UnsafeMutablePointer<_object> : PyEncodable {
 //    public var pyObject: PythonObject {
 //        .init(getter: self)
