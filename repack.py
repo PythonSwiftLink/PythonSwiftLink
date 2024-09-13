@@ -6,11 +6,14 @@ def get_package_swift() -> str:
         text = rf.read()
     return text
 
-
-with open(package_path, "w") as f:
-    old = "PythonSwiftLink/PythonCore"
-    new = "KivySwiftLink/PythonCore"
-    package_text = get_package_swift().replace(old, new)
-    f.write(package_text)
+def write_package_swift(path, content):
+    with open(path, "w") as f:
+        old = "PythonSwiftLink/PythonCore"
+        new = "KivySwiftLink/PythonCore"
+        package_text = content.replace(old, new)
+        f.write(package_text)
     
-
+write_package_swift(
+    package_path, 
+    get_package_swift()
+)
