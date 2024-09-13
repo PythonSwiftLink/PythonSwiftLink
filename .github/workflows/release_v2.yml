@@ -47,6 +47,7 @@ jobs:
       - name: repack
         run: |
           python repack.py
+          echo "$(<_PythonSwiftLink/Package.swift )"
           cp -f _PythonSwiftLink/Package.swift PythonSwiftLink/Package.swift
           cp -rf _PythonSwiftLink/Sources/* PythonSwiftLink/Sources/
           cp -rf _PythonSwiftLink/Tests PythonSwiftLink/Tests
