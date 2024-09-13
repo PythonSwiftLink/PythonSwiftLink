@@ -57,7 +57,7 @@ public protocol PyNumericProtocol {
 }
 
 public protocol PyHashable {
-    var __hash__: Int { get }
+    func __hash__() -> Int
 }
 
 public protocol PyStrProtocol {
