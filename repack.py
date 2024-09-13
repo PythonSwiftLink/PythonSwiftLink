@@ -15,5 +15,5 @@ def write_package_swift(path, content):
     
 write_package_swift(
     package_path, 
-    get_package_swift(package_path)
+    get_package_swift()
 )
