@@ -62,6 +62,23 @@ let package = Package(
 			name: "PyTypes",
 			targets: ["PyTypes"]
 		),
+		.library(
+			name: "PyTuples",
+			targets: ["PyTuples"]
+		),
+		.library(
+			name: "SwiftonizeModules",
+			targets: [
+				"PySwiftCore",
+				"PySwiftObject",
+				"PyUnpack",
+				"PyEncode",
+				"PyCallable",
+				"PyDictionary",
+				"PyTuples"
+			]
+		),
+		
 	],
 	dependencies: [
 
@@ -148,6 +165,8 @@ let package = Package(
 			name: "PyDecode",
 			dependencies: [
 				"PySwiftCore",
+				"PyTypes",
+				"PyComparable"
 			]
 		),
 		.target(
@@ -156,14 +175,21 @@ let package = Package(
 				"PySwiftCore",
 			]
 		),
-		
-			.target(
-				name: "PyTypes",
-				dependencies: [
-					"PyEncode",
-					"PySwiftCore",
-				]
-			),
+		.target(
+			name: "PyTypes",
+			dependencies: [
+				"PyEncode",
+				"PySwiftCore",
+			]
+		),
+		.target(
+			name: "PyTuples",
+			dependencies: [
+				"PyEncode",
+				"PyDecode",
+				"PySwiftCore",
+			]
+		),
 		
 		
 		.target(

@@ -4,6 +4,7 @@ import PythonCore
 import PySwiftCore
 import PyEncode
 
+
 public protocol PyTypeProtocol: PyEncodable {
 	static var PyType: UnsafeMutablePointer<PyTypeObject> { get }
 }

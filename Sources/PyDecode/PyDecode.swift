@@ -1,6 +1,8 @@
 import Foundation
 import PySwiftCore
 import PythonCore
+import PyTypes
+import PyComparable
 //import PythonTypeAlias
 //import PyMemoryView
 
@@ -35,9 +37,8 @@ extension PyPointer : PyDecodable {
 extension Data: PyDecodable {
     
     public init(object: PyPointer) throws {
-        
-        switch object {
-        case let mem where PyMemoryView_Check(mem):
+		switch object {
+		case .PyMemoryView:
 			let data_size = PyObject_Size(object)
 			// fetch PyBuffer from MemoryView
 			let py_buf = PyMemoryView_GetBuffer(object)
@@ -50,14 +51,118 @@ extension Data: PyDecodable {
 			self = Data(UnsafeMutableBufferPointer(start: uint8_pointer, count: data_size))
 			// Release PyBuffer and MemoryView
 			PyBuffer_Release(py_buf)
-            
-        case let bytes where PyBytes_Check(bytes):
-            self = bytes.bytesAsData() ?? .init()
-        case let bytearray where PyByteArray_Check(bytearray):
-            self = bytearray.bytearrayAsData() ?? .init()
-        default: throw PythonError.memory("object is not a byte or memoryview type")
-        }
+		case .PyBytes:
+			self = try Self.fromBytes(bytes: object)
+		case .PyByteArray:
+			self = try Self.fromByteArray(bytes: object)
+		default: fatalError()
+		}
+//        switch object {
+//        case let mem where PyMemoryView_Check(mem):
+//			let data_size = PyObject_Size(object)
+//			// fetch PyBuffer from MemoryView
+//			let py_buf = PyMemoryView_GetBuffer(object)
+//			var indices = [0]
+//			// fetch RawPointer from PyBuffer, if fail return nil
+//			guard let buf_ptr = PyBuffer_GetPointer(py_buf, &indices) else { throw PythonError.memory("Data from memmoryview failed") }
+//			// cast RawPointer as UInt8 pointer
+//			let uint8_pointer = buf_ptr.assumingMemoryBound(to: UInt8.self)
+//			// finally create Data from the UInt8 pointer
+//			self = Data(UnsafeMutableBufferPointer(start: uint8_pointer, count: data_size))
+//			// Release PyBuffer and MemoryView
+//			PyBuffer_Release(py_buf)
+//            
+//        case let bytes where PyBytes_Check(bytes):
+//            self = bytes.bytesAsData() ?? .init()
+//        case let bytearray where PyByteArray_Check(bytearray):
+//            self = bytearray.bytearrayAsData() ?? .init()
+//        default: throw PythonError.memory("object is not a byte or memoryview type")
+//        }
     }
+	
+	@inlinable public static func fromBytes(bytes: PyPointer) throws -> Self {
+		
+		let data_size = PyBytes_Size(bytes)
+		// PyBytes to MemoryView
+		guard let mview = PyMemoryView_FromObject(bytes) else { throw PythonError.type("not bytes") }
+		// fetch PyBuffer from MemoryView
+		let py_buf = PyMemoryView_GetBuffer(mview)
+		var indices = [0]
+		// fetch RawPointer from PyBuffer, if fail return nil
+		guard let buf_ptr = PyBuffer_GetPointer(py_buf, &indices) else { throw PythonError.type("not bytes")}
+		// cast RawPointer as UInt8 pointer
+		let data = Self(
+			bytes: buf_ptr,
+			count: data_size
+		)
+		// Release MemoryView
+		Py_DecRef(mview)
+		return data
+	}
+	
+	@inlinable public static func fromByteArray(bytes: PyPointer) throws -> Self {
+		
+		let data_size = PyByteArray_Size(bytes)
+		// PyBytes to MemoryView
+		guard let mview = PyMemoryView_FromObject(bytes) else { throw PythonError.type("not bytes") }
+		// fetch PyBuffer from MemoryView
+		let py_buf = PyMemoryView_GetBuffer(mview)
+		var indices = [0]
+		// fetch RawPointer from PyBuffer, if fail return nil
+		guard let buf_ptr = PyBuffer_GetPointer(py_buf, &indices) else { throw PythonError.type("not bytes")}
+		// cast RawPointer as UInt8 pointer
+		let data = Self(
+			bytes: buf_ptr,
+			count: data_size
+		)
+		// Release MemoryView
+		Py_DecRef(mview)
+		return data
+	}
+}
+
+extension Array where Element == UInt8 {
+	@inlinable public static func fromBytes(bytes: PyPointer) throws -> Self {
+		
+		let data_size = PyBytes_Size(bytes)
+		// PyBytes to MemoryView
+		guard let mview = PyMemoryView_FromObject(bytes) else { throw PythonError.type("not bytes") }
+		// fetch PyBuffer from MemoryView
+		let py_buf = PyMemoryView_GetBuffer(mview)
+		var indices = [0]
+		// fetch RawPointer from PyBuffer, if fail return nil
+		guard let buf_ptr = PyBuffer_GetPointer(py_buf, &indices) else { throw PythonError.type("not bytes")}
+		// cast RawPointer as UInt8 pointer
+		
+		let array = Self(UnsafeBufferPointer(
+			start: buf_ptr.assumingMemoryBound(to: UInt8.self),
+			count: data_size)
+		)
+		// Release PyBuffer and MemoryView
+		Py_DecRef(mview)
+		return array
+	}
+	
+	@inlinable public static func fromByteArray(bytes: PyPointer) throws -> Self {
+		
+		let data_size = PyByteArray_Size(bytes)
+		// PyBytes to MemoryView
+		guard let mview = PyMemoryView_FromObject(bytes) else { throw PythonError.type("not bytes") }
+		// fetch PyBuffer from MemoryView
+		let py_buf = PyMemoryView_GetBuffer(mview)
+		var indices = [0]
+		// fetch RawPointer from PyBuffer, if fail return nil
+		guard let buf_ptr = PyBuffer_GetPointer(py_buf, &indices) else { throw PythonError.type("not bytes")}
+		// cast RawPointer as UInt8 pointer
+		
+		let array = Self(UnsafeBufferPointer(
+			start: buf_ptr.assumingMemoryBound(to: UInt8.self),
+			count: data_size)
+		)
+		// Release PyBuffer and MemoryView
+		Py_DecRef(mview)
+		return array
+	}
 }
 
 extension Bool : PyDecodable {
@@ -72,6 +177,8 @@ extension Bool : PyDecodable {
         }
         
     }
+	
+	
 }
 
 
