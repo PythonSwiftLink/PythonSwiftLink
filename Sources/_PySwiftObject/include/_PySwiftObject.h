@@ -21,7 +21,7 @@ typedef struct {
 
 PyModuleDef_Base _PyModuleDef_HEAD_INIT;
 
-long PySwiftObject_dict_offset;
+//long PySwiftObject_dict_offset;
 long PySwiftObject_size;
 
 PyObject* PySwiftObject_New(PyTypeObject *type);
