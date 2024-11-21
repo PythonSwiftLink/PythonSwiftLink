@@ -9,7 +9,7 @@
 
 PyModuleDef_Base _PyModuleDef_HEAD_INIT = PyModuleDef_HEAD_INIT;
 
-long PySwiftObject_dict_offset = offsetof(PySwiftObject, dict);
+//long PySwiftObject_dict_offset = offsetof(PySwiftObject, dict);
 long PySwiftObject_size = sizeof(PySwiftObject);
 
 PySwiftObject* PySwiftObject_Cast(PyObject* o) {
