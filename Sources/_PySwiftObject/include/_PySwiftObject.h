@@ -4,6 +4,10 @@
 //
 //  Created by CodeBuilder on 21/01/2024.
 //
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #ifndef _PySwiftObject_h
 #define _PySwiftObject_h
@@ -28,3 +32,8 @@ PyObject* PySwiftObject_New(PyTypeObject *type);
 PySwiftObject* PySwiftObject_Cast(PyObject* o);
 
 #endif /* _PySwiftObject_h */
+
+
+#ifdef __cplusplus
+}
+#endif
